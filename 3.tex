@@ -1,0 +1,86 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+%                      %
+%       CURSUL 3       %
+%                      %
+%%%%%%%%%%%%%%%%%%%%%%%%
+\part{}
+\section{Serii Trigonometrice}
+\paragraph{Definiția 1.}
+Se numește serie trigonometrică o serie de funcții $\displaystyle\sum_{n=0}^{+\infty}f_{n}$ în care $f_{n}: \mathbb{R} \rightarrow \mathbb{R}$, $f_{0}(x) = a_{0}$, $\forall x \in \mathbb{R}$ și
+$f_{n}(x) = a_{n} \cos(nx) + b_{n} \sin(nx)$, $\forall x \in \mathbb{R}$, $\forall n \in \mathbb{N}^{*}$.
+
+\paragraph{NOTAȚIE}
+$\displaystyle\sum_{n=0}^{+\infty}f_{n}$ \ushortdw{not} $a_{0} + \displaystyle\sum_{n=0}^{+\infty}[a_{n}\cos(nx) + b_{n}\sin(nx)]$.
+
+$a_{0}, a_{n}, b_{n}$ se numesc coeficienții seriei trigonometrice
+
+$s_{n}:\mathbb{R} \rightarrow \mathbb{R}$, $s_{n}(x) = a_{0} + \displaystyle\sum_{k=1}^{n}[a_{k}\cos(kx) + b_{k}\sin(kx)]$, $\forall x \in \mathbb{R}$
+
+$s_{n}$ se numește polinomul trigonometric de rang $n$.
+
+\vspace{30pt}
+$s_{n}(x + 2k\pi) = a_{0} + \displaystyle\sum_{k=1}^{n}[a_{k}\cos(kx + 2kp \pi) + b_{k}\sin(kx+2kp \pi)] = $
+
+$= a_{0} + s_{n}(x + 2k\pi) = a_{0} + \displaystyle\sum_{k=1}^{n}[a_{k}\cos(kx) + b_{k}\sin(kx)] = s_{n}(x)$
+
+$s_{n}(x+2p \pi) = s_{n}(x)$, $\forall p \in \mathbb{Z}$, $\forall x \in \mathbb{R}$
+
+\paragraph{OBSERVAȚIE}
+$s_{n}$ este funcție periodică de perioadă $2 \pi$.
+
+\paragraph{Teorema 1.}
+Dacă seria trigonometrică este simplu convergentă pe $[-\pi, \pi]$, atunci seria trigonometrică este simplu convergentă pe $\mathbb{R}$ și $f(x+2k\pi) = f(x)$, $\forall x \in \mathbb{R}$,
+$\forall k \in \mathbb{Z}$, unde $f:\mathbb{R} \rightarrow \mathbb{R}$ este suma seriei.
+
+\pagebreak
+
+\paragraph{Teorema 2.}
+Dacă seria trigonometrică este uniform convergentă pe $[-\pi, \pi]$ către funcția $f:[-\pi,\pi]$ $\rightarrow$ $\mathbb{R}$, atunci
+\begin{itemize}
+	\item $a_{0} = \frac{1}{2 \pi} \cdot \int_{-\pi}^{\pi}f(x)dx$,
+	\item $a_{n} = \frac{1}{\pi} \cdot \int_{-\pi}^{\pi}f(x) \cdot \cos(nx) dx$, $\forall n \in \mathbb{N}^{*}$.
+	\item $b_{n} = \frac{1}{\pi} \cdot \int_{-\pi}^{\pi}f(x) \cdot \sin(nx) dx$, $\forall n \in \mathbb{N}^{*}$.
+\end{itemize}
+
+\subsection{Exemple de funcții Riemann}
+\begin{enumerate}[label=\emph{\arabic*})]
+	\item Orice funcție continuă $f:[a,b] \rightarrow \mathbb{R}$ este integrabilă Riemann.
+	\item Orice funcție monotonă $f:[a,b] \rightarrow \mathbb{R}$ este integrabilă Riemann.
+\end{enumerate}
+
+\paragraph{Definiția 2.}
+Numerele reale
+\begin{itemize}
+	\item $a_{0}^{f}$ $^{\ushortdw{def}}$ $\displaystyle\frac{1}{2 \pi}
+        \cdot \displaystyle\int_{-\pi}^{\pi}f(x)dx.$
+	\item $a_{n}^{f}$ $^{\ushortdw{def}}$ $\displaystyle\frac{1}{\pi}
+        \cdot \displaystyle\int_{-\pi}^{\pi}f(x) \cos(nx) dx.$
+	\item $b_{n}^{f}$ $^{\ushortdw{def}}$ $\displaystyle\frac{1}{\pi}
+        \cdot \displaystyle\int_{-\pi}^{\pi}f(x) \sin(nx) dx.$
+\end{itemize}
+se numesc coeficienți Fourier ai funcției $f$.
+
+Seria trigonometrică $a_{0}^{f} + \displaystyle\sum_{n=1}^{+\infty}a_{n}^{f}\cos(nx) + b_{n}^{f}\sin(nx)$ se numește seria Fourier a funcției $f$.
+
+\subsection{Egalitatea lui Parseval}
+Fie $f:[-\pi, \pi] \rightarrow \mathbb{R}$ o funcție integrabilă Riemann.
+Are loc egalitatea
+
+$\displaystyle\frac{1}{\pi} \cdot \displaystyle\int_{-\pi}^{\pi}f^{2}(x)dx$ $=$ $2 \cdot (a_{0}^{f})^{2} + \displaystyle\sum_{n=1}^{+\infty}[(a_{n}^{f})^{2}+(b_{n}^{f})^{2}]^{-\pi}$
+
+\paragraph{Teorema 3.}
+Fie $f:[-\pi, \pi] \rightarrow \mathbb{R}$ o funcție integrabilă și $x_{0} \in (-\pi, \pi)$ astfel încât $f$ este derivabilă în $x_{0}$. Atunci seria Fourier a funcției $f$ este
+convergentă în $x_{0}$ și \\ 
+$a_{0}^{f}+\displaystyle\sum_{n=1}^{+\infty}[a_{n}^{f}\cos(nx_{0}) + b_{n}^{f}\sin(nx_{0})] = f(x_{0})$.
+
+\paragraph{Corolar.}
+Dacă $f|_{(-\pi, \pi)}$ este derivabilă, atunci seria Fourier a funcției este simplu convergentă pe $(-\pi,\pi)$ și suma ei este $f||_{(-\pi, \pi)}$.
+
+\paragraph{Teorema 4.}
+Fie $f:[-\pi, \pi] \rightarrow \mathbb{R}$ o funcție derivabilă pe $f:[-\pi, \pi] \rightarrow \mathbb{R}$ astfel încât $f(-\pi) = f(\pi)$ și $f':[-\pi, \pi] \rightarrow \mathbb{R}$
+este integrabilă Riemann. Atunci seria Fourier a funcției $f$ este uniform convergentă pe $[-\pi, \pi]$ către funcția $f:[-\pi, \pi] \rightarrow \mathbb{R}$ și au loc următoarele egalități:
+\begin{itemize}
+	\item $a_{n}^{f} = -\frac{1}{n} \cdot a_{n}^{f'}$
+	\item $b_{n}^{f} = \frac{1}{n} \cdot b_{n}^{f'}$
+\end{itemize}
+$\forall n \in \mathbb{N}^{*}$.

@@ -1,0 +1,120 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+%                      %
+%       CURSUL 12      %
+%                      %
+%%%%%%%%%%%%%%%%%%%%%%%%
+\part{}
+\subsection{Definiția funcției integrabile Riemann, criterii de integrabilitate, operații cu funcții integrabile Riemann}
+
+\paragraph{Definiția 1.}
+Funcția $f:[a,b] \rightarrow \mathbb{R}$ se numește integrabilă Riemann dacă $\exists I \in \mathbb{R}$ cu proprietatea că $\forall \varepsilon > 0$, $\exists \delta_{\varepsilon} > 0$
+astfel încât $\forall \Delta \in \mathcal{D}([a,b])$ cu $\lVert \Delta \rVert < \delta_{\varepsilon}$, $\forall T$ un sistem de puncte intermediare al diviziunii $\Delta$ avem
+$\left| \delta_{\Delta}(f, T) - I \right| < \varepsilon$.
+
+\paragraph{NOTAȚIE}
+$I$ $^{\ushortdw{def}}$ $\displaystyle\int_{a}^{b}f(x) dx$ (integrala definită a funcției f pe $[a,b]$). \\
+$\mathcal{R}([a,b])$ $^{\ushortdw{def}}$ $\{ f:[a,b] \rightarrow \mathbb{R}$ $\vert$ $f$ este integrabilă Riemann pe $[a,b] \}$
+
+\paragraph{Observații}
+Dacă $f \in \mathcal{R}([a,b]), (\Delta_{n})_{n \in \mathbb{N}} \subseteq \mathcal{D}([a,b])$ cu $\displaystyle\lim_{n \rightarrow \infty} \lVert \Delta_{n} \rVert = 0$,
+$(T_{n})_{n \in \mathbb{N}}$ șir de sisteme de puncte intermediare asociate diviziunii $(\Delta_{n})_{n \in \mathbb{N}}$ atunci
+$\displaystyle\lim_{n \rightarrow \infty} \sigma_{\Delta_{n}}(f, T_{n}) = \displaystyle\int_{a}^{b} f(x) dx$. 
+
+\subsubsection{Criteriul lui Darboux de integrabilitate}
+Următoarele afirmații sunt echivalente:
+\begin{enumerate}[label=\emph{\alph*})]
+    \item $f \in \mathcal{R}([a,b])$
+    \item $f$ este funcție mărginită pe $[a,b]$ și $\forall \varepsilon > 0$, $\exists \delta_{\varepsilon} > 0$ astfel încât
+    $S_{\Delta}(f) - s_{\Delta}(f) < \varepsilon$, $\forall \Delta \in \mathcal{D}([a,b])$ cu $\lVert \Delta \rVert < \delta_{\varepsilon}$.
+\end{enumerate}
+
+\paragraph{Definiția 2.}
+O mulțime $A \subseteq \mathbb{R}$ se numește neglijabilă Lebesgue dacă $\forall \varepsilon > 0$,
+$\exists ((a_{n}, b_{n}))_{n \in \mathbb{N}}$ un șir de intervale deschise astfel încât
+$A \subseteq \underset{n \in \mathbb{N}}{\cup} (a_{n}, b_{n})$ și $\displaystyle\sum_{n \in \mathbb{N}}(b_{n}-a_{n}) < \varepsilon$.
+
+\paragraph{Exemple de mulțimi neglijabile Lebesgue}
+\begin{enumerate}[label=\emph{\arabic*})]
+    \item $\phi$
+    \item Orice mulțime finită din $\mathbb{R}$
+    \item Orice mulțime numărabilă din $\mathbb{R}$
+\end{enumerate}
+
+\subsubsection{Criteriul lui Lebesgue de integrabilitate}
+Următoarele afirmații sunt echivalente:
+
+
+\begin{enumerate}[label=\emph{\alph*})]
+    \item $f \in \mathcal{R}([a,b])$
+    \item $f$ este funcție mărginită pe $[a,b]$ și $\{ x \in [a,b]$ $\vert$ $f$ nu este continuă în $x \}$ este neglijabilă Lebesgue.
+\end{enumerate}
+
+\paragraph{Teorema 1.}
+Fie $f, g:[a,b] \rightarrow \mathbb{R}$ astfel încât $f \in \mathcal{R}([a,b])$ și $g$ este funcție mărginită pe $[a,b]$.
+Dacă $\{ x \in [a,b]$ $\vert$ $f(x) + g(x) \}$ este ori finită, ori numărabilă, atunci $g \in \mathcal{R}([a,b])$.
+\begin{equation*}
+    \displaystyle\int_{a}^{b}f(x)dx = \displaystyle\int_{a}^{b}g(x)dx
+\end{equation*}
+
+\paragraph{Operații cu funcții integrabile}
+Fie $f, g \in \mathcal{R}([a,b])$. Atunci $f+g, f-g, f \cdot g, \alpha f, \lvert f \rvert \in \mathcal{R}([a,b])$ și au
+loc următoarele relații:
+\begin{itemize}
+    \item $\displaystyle\int_{a}^{b}(f(x) \pm g(x))dx = \displaystyle\int_{a}^{b}f(x)dx \pm \displaystyle\int_{a}^{b}g(x)dx$.
+    \item $\displaystyle\int_{a}^{b}\alpha f(x)dx = \alpha\displaystyle\int_{a}^{b}f(x)dx$
+    \item $\left\lvert \displaystyle\int_{a}^{b}f(x)dx \right\rvert \leq \displaystyle\int_{a}^{b} \lvert f(x) \rvert dx$
+\end{itemize}
+
+\subsection{Clase de funcții integrabile Riemann}
+\paragraph{Teorema 2.}
+Orice funcție monotona $f:[a,b] \rightarrow \mathbb{R}$ este integrabilă Riemann.
+
+\paragraph{Demonstrație}
+Presupunem funcția $f$ crescătoare și demonstrăm că $f \in \mathcal{R}([a,b])$ folosind criteriul lui Darboux. \\[5pt]
+$f(a) \leq f(x) \leq f(b)$, $\forall x \in [a,b] \Rightarrow f$ este funcție mărginită. \\[8pt]
+$M_{i} = \displaystyle\sup_{x \in [x_{i-1}, x_{i}]} f(x)$ \\
+$m_{i} = \displaystyle\inf_{x \in [x_{i-1}, x_{i}]} f(x) = f(x_{i-1})$\\ [5pt]
+$S_{\Delta}(f) - \Delta_{\Delta}(f) = \displaystyle\sum_{i=1}^{p} M_{i}(x_{i} - x_{i-1}) - \displaystyle\sum_{i=1}^{p} m_{i}(x_{i} - x_{i-1}) = \\
+= \displaystyle\sum_{i=1}^{p}(M_{i} - m_{i})(x_{i} - x_{i-1}) = \displaystyle\sum_{i=1}^{p}(f(x_{i}) - f(x_{i-1}))(x_{i}-x_{i-1}) \leq \lVert \Delta \rVert$ \\
+$S_{\Delta}(f) - s_{\Delta}(f) \leq \displaystyle\sum_{i=1}^{p}(f(x_{i}) - f(x_{i-1})) \cdot \lVert \Delta \rVert$ \\
+$S_{\Delta}(f) - s_{\Delta}(f) \leq \lVert \Delta \rVert (f(x_{1}) - f(x_{0}) + f(x_{2}) - f(x_{1}) + \mathellipsis + f(x_{p}) - f(x_{p-1}))$ \\[5pt]
+$S_{\Delta}(f) - s_{\Delta}(f) \leq \lVert \Delta \rVert (f(b) - f(a))$ \ding{172} \\[8pt]
+Fie $\varepsilon > 0$. Alegem $\delta_{\varepsilon} = \displaystyle\frac{\varepsilon}{f(b) - f(a) + 1}$. \\
+Dacă $\lVert \Delta \rVert < \delta_{\varepsilon} \Rightarrow \lVert \Delta \rVert (f(b) - f(a)) < \varepsilon$ $\overset{\text{\ding{172}}}{\Rightarrow}$
+$S_{\Delta}(f) - s_{\Delta}(f) < \varepsilon \Rightarrow f \in \mathcal{R}([a,b])$ \\
+
+\paragraph{Teorema 3.}
+Orice funcție continuă $f:[a,b] \rightarrow \mathbb{R}$ este integrabilă Riemann.
+
+\paragraph{Demonstrație}
+Demonstrăm că $f \in \mathcal{R}([a,b])$ folosind criteriul lui Lebesgue. \\[9pt]
+
+$\left.
+    \begin{array}{l}
+        f \text{ continuă pe} [a,b] \\
+        $ $[a,b]$ $ \subseteq \mathbb{R} \text{ mulțime compactă}
+    \end{array}
+\right|
+\Rightarrow f$ este mărginită și își atinge marginile. \\[6pt]
+
+$\{ x \in [a,b]$ $|$ $f$ nu este continuă în $x$ $\} = \phi$ este neglijabilă Lebesgue $\Rightarrow f \in \mathcal{R}([a,b])$.
+
+\subsection{Permutarea limitei cu integrala}
+\subsubsection{Teorema lui Weierstrass}
+Fie $(f_{n})_{n \in \mathbb{N}} \subseteq \mathcal{R}([a,b])$ și $f:[a,b] \rightarrow \mathbb{R}$ astfel încât
+$f_{n} \autorightarrow{$u$}{$n \rightarrow \infty$} f$ pe $[a,b]$. Atunci $f \in \mathcal{R}([a,b])$ și
+$\displaystyle\int_{a}^{b} f(x) dx = \displaystyle\lim_{n \rightarrow \infty} \displaystyle\int_{a}^{b} f_{n}(x)dx$.
+
+\subsubsection{Teorema convergenței mărginite}
+Fie $(f_{n})_{n \in \mathbb{N}} \subseteq \mathcal{R}([a,b])$ și $f:[a,b] \rightarrow \mathbb{R}$ astfel încât
+$f_{n} \autorightarrow{$s$}{$n \rightarrow \infty$} f$ pe $[a,b]$ și $\exists M>0$ astfel încât
+$\lvert f_{n}(x) \leq M \rvert, x \in [a,b], \forall n \in \mathbb{N}$. Atunci 
+$\displaystyle\int_{a}^{b} f(x) dx = \displaystyle\lim_{n \rightarrow \infty} \displaystyle\int_{a}^{b} f_{n}(x)dx$.
+
+\subsection{Proprietățile funcțiilor integrabile Riemann}
+\paragraph{Teorema 5.}
+Fie $f \in \mathcal{R}([a,b])$ și considerăm funcțiile $F, G:[a,b] \rightarrow \mathbb{R}, F(x) = \displaystyle\int_{a}^{x}f(t)dt, \\
+G(x) = \displaystyle\int_{x}^{b}f(t)dt$. Atunci $F,G$ funcții continue pe $[a,b]$. \\[5pt]
+Dacă $f$ este continuă în $x_{0} \in [a,b]$ atunci $F,G$ sunt derivabile în $x_{0}$ și $F'(x_{0}) = f'(x_{0})$ și \\ 
+$G'(x_{0}) = -f(x_{0})$. \\[5pt]
+Dacă $f$ este continuă pe $[a,b]$, atunci $F,G$ derivabile peste tot și $F'(x) = f(x), G'(x) = -f(x), \forall x \in [a,b]$.

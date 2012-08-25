@@ -1,0 +1,170 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+%                      %
+%       CURSUL 4       %
+%                      %
+%%%%%%%%%%%%%%%%%%%%%%%%
+\part{}
+\section{Derivabilitate în $\mathbb{R}$}
+
+\paragraph{Definiția 1.}
+O funcție $f:D \subseteq \mathbb{R} \rightarrow \mathbb{R}$ este
+derivabilă în $x_{0} \in D \cap D'$ dacă \\[5pt]
+$\exists \displaystyle\lim_{x \rightarrow x_{0}} \frac{f(x) - f(x_{0})}{x-x_{0}} \in \mathbb{R}$.
+
+\paragraph{NOTAȚIE} $\displaystyle\lim_{x \rightarrow x_{0}} \frac{f(x) - f(x_{0})}{x-x_{0}}$ $\ushortdw{not}$ $f'(x_{0})$ (derivata funcției $f$ în $x_{0}$).
+
+\paragraph{Definiția 2.}
+Funcția $f:D \subseteq \mathbb{R} \rightarrow \mathbb{R}$ se numește derivabilă în orice punct din $D \cap D'$.
+
+\paragraph{Observație}
+Funcția $f: D \subseteq \mathbb{R} \rightarrow \mathbb{R}$ este dervabilă în $x_{0} \in D \cap D'$ $\Leftrightarrow$ $\exists l \in \mathbb{R}$ cu proprietatea că $\forall \varepsilon > 0$,
+$\exists \delta_{\varepsilon} > 0$ astfel încât $\forall x \in D \ \{x_{0}\}$ cu $\lvert x - x_{0} \rvert < \delta_{\varepsilon}$ avem că
+$\left| \frac{\displaystyle f(x) - f(x_{0})}{\displaystyle x-x_{0}} - l
+\right|$ $ < \varepsilon$. În acest caz, $l = f'(x_{0})$.
+
+\paragraph{Definiția 3.}
+Fie $f:D \subseteq \mathbb{R} \rightarrow \mathbb{R}$ și $x_{0} \in D \cap (D \cap (-\infty, x_{0}))'$. $f$ este derivabilă la stânga în $x_{0}$ dacă
+$\exists \displaystyle\lim_{\substack{x \rightarrow x_{0} \\ x<x_{0}}} \frac{f(x) - f(x_{0})}{x-x_{0}} \in \mathbb{R}$.
+
+\paragraph{NOTAȚIE}
+$\displaystyle\lim_{\substack{x \rightarrow x_{0} \\ x<x_{0}}} \frac{f(x) - f(x_{0})}{x-x_{0}}$ $\ushortdw{not}$ $f_{s}'(x_{0})-x < x_{0}$.
+
+\paragraph{Definiția 4.}
+Fie $f:D \subseteq \mathbb{R} \rightarrow \mathbb{R}$ și $x_{0} \in D \cap (D \cap (x_{0}, +\infty))'$. $f$ este derivabilă la stânga în $x_{0}$ dacă
+$\exists \displaystyle\lim_{\substack{x \rightarrow x_{0} \\ x>x_{0}}} \frac{f(x) - f(x_{0})}{x-x_{0}} \in \mathbb{R}$.
+
+\paragraph{NOTAȚIE}
+$\displaystyle\lim_{\substack{x \rightarrow x_{0} \\ x>x_{0}}} \frac{f(x) - f(x_{0})}{x-x_{0}}$ $\ushortdw{not}$ $f_{d}'(x_{0})-x < x_{0}$.
+
+\paragraph{Observație}
+Dacă $x_{0} \in D^{\circ}$ atunci $x_{0} \in D \cap (D \cap (-\infty, x_{0}))' \cap (D \cap (x_{0}, +\infty))'$.
+
+\paragraph{Teorema 1.}
+Fie $f:D \subseteq \mathbb{R} \rightarrow \mathbb{R}$ și $x_{0} \in D^{\circ}$. Următoarele afirmații sunt echivalente:
+\begin{enumerate}[label=\emph{\alph*})]
+	\item $f$ este derivabilă în $x_{0}$;
+	\item $f$ este derivabilă la stânga și la dreapta în $x_{0}$ și $f_{s}'(x_{0}) = f_{d}'(x_{0})$.
+\end{enumerate}
+În acest caz, $f'(x_{0}) = f_{s}'(x_{0}) = f_{d}'(x_{0})$.
+
+\paragraph{Teorema 2.}
+Dacă $f:D \subseteq \mathbb{R} \rightarrow \mathbb{R}$ este derivabilă în $x_{0} \in D \cap D'$ atunci $f$ este continuă în $x_{0}$.
+
+\paragraph{Demonstrație}
+$\exists\displaystyle\lim_{x \rightarrow x_{0}} \frac{f(x) - f(x_{0})}{x-x_{0}} = f'(x_{0}) \in \mathbb{R}$
+
+\vspace{5pt}
+
+$f(x) - f(x_{0}) = \frac{\displaystyle f(x) - f(x_{0})}{\displaystyle x - x_{0}} (x - x_{0})$, $\forall x \in D \setminus \{x\}$
+
+$\displaystyle\lim_{x \rightarrow x_{0}} \frac{f(x) - f(x_{0})}{x-x_{0}} = f'(x_{0}) \in \mathbb{R}$
+
+\vspace{5pt}
+
+$\displaystyle\lim_{x \rightarrow x_{0}} (x - x_{0}) = 0 \in \mathbb{R}$ $\Rightarrow$
+
+$\Rightarrow$ $\exists\displaystyle\lim_{x \rightarrow x_{0}} (f(x) - f(x_{0})) = 0$ $\Rightarrow$
+
+$\Rightarrow$ $\exists\displaystyle\lim_{x \rightarrow x_{0}} f(x) = f(x_{0})$ $\Rightarrow$
+
+$\Rightarrow$ $f$ este continuă în $x_{0}$.
+
+\paragraph{Observație}
+Reciproca teoremei 2 este falsă.
+
+\paragraph{Exemple:}
+\begin{enumerate}[label=\emph{\arabic*})]
+	\item $f: \mathbb{R} \rightarrow \mathbb{R}$, $f(x) = \lvert x \rvert$
+
+		$f$ este continuă în 0
+
+		$f$ nu este derivabilă în 0
+
+	\item $f: [-1, 1] \rightarrow [-\frac{\pi}{2}, \frac{\pi}{2}]$, $f(x) = \arcsin x$
+
+		$f$ este continuă în 1, în -1
+
+		$f$ nu este derivabilă în 1, în -1
+
+	\item $f: [0, +\infty] \rightarrow \mathbb{R}$, $f(x) = \sqrt[2k]{x}$, $k \in \mathbb{N}^{*}$
+
+		$f$ este continuă în 0
+
+		$f$ nu este derivabilă în 0
+\end{enumerate}
+
+\subsection{Operații cu funcții derivabile}
+Considerăm $f$, $g: D \subseteq \mathbb{R} \rightarrow \mathbb{R}$ și $x_{0} \in D \cap D'$ astfel încât $f$ și $g$ sunt derivabile în $x_{0}$. Atunci:
+\begin{enumerate}[label=\emph{\alph*})]
+	\item $f+g$, $f-g$, $\lambda f$, $f \cdot g$ sunt derivabile în $x_{0}$ și au loc următoarele formule:
+		\begin{itemize}
+			\item $(f \pm g)'(x_{0}) = f'(x_{0}) \pm g'(x_{0})$
+			\item $(\lambda f)'(x_{0}) = \lambda f'(x_{0})$
+			\item $(f \cdot g)'(x_{0}) = f'(x_{0})g(x_{0}) + f(x_{0})g'(x_{0})$
+		\end{itemize}
+	\item Dacă, în plus, $g(x) \neq 0$, $\forall x \in D$, atunci $\frac{\displaystyle f}{\displaystyle g}$ este funcție derivabilă în $x_{0}$ și \\
+		$\left(\displaystyle\frac{f}{g}\right)'(x_{0}) = \frac{\displaystyle f'(x_{0})g(x_{0})-f(x_{0})g'(x_{0})}{\displaystyle g^{2}(x)}$
+\end{enumerate}
+
+\subsection{Compunerea funcțiilor derivabile}
+Considerăm $f: D \subseteq \mathbb{R} \rightarrow \mathbb{R}$ și $g: A \subseteq \mathbb{R} \rightarrow \mathbb{R}$ astfel încât $Imf \subseteq A$ și $x_{0} \in D \cap D'$
+astfel încât $f(x_{0}) \in (Imf)'$
+
+Dacă $f$ este derivabilă în $x_{0}$ și $g$ este derivabilă în $f(x_{0})$, atunci $g \circ f: D \rightarrow \mathbb{R}$ este derivabilă în $x_{0}$ și $(g \circ f)'(x_{0}) = g'(f(x_{0})) \cdot f'(x_{0})$.
+
+\subsection{Derivabilitatea inversei unei funcții}
+ Considerăm o funcție bijectivă $f: I \rightarrow J$, unde $I$, $J$ $\subseteq \mathbb{R}$ sunt intervale.
+
+Fie $x_{0} \in I \cap I'$ astfel încât $f(x_{0}) \in J \cap J'$. Dacă $f$ este derivabilă în $x_{0}$, dacă $f^{-1}$ este continuă în $y_{0} = f(x_{0})$ și $f'(x_{0}) \neq 0$,
+atunci $f^{-1}: J \rightarrow I$ este derivabilă în $y_{0} = f(x_{0})$ și $(f^{-1})'(y_{0}) = \frac{\displaystyle 1}{\displaystyle f'(x_{0})}$.
+
+\paragraph{Definiția 5.}
+Fie $f: D \subseteq \mathbb{R} \rightarrow \mathbb{R}$ și $x_{0} \in D$
+\begin{enumerate}[label=\emph{\alph*})]
+	\item $x_{0}$ se numește punct de maxim $global$ pentru $f$ dacă $f(x) \leq f(x_{0})$, $\forall x \in D$
+	\item $x_{0}$ se numește punct de maxim $local$ pentru $f$ dacă $\exists V \in \mathcal{V}(x_{0})$ astfel încât $f(x) \leq f(x_{0})$,\\ $\forall x \in V \cap D$
+	\item $x_{0}$ se numește punct de minim $global$ pentru $f$ dacă $f(x) \geq f(x_{0})$, $\forall x \in D$
+	\item $x_{0}$ se numește punct de minim $local$ pentru $f$ dacă $\exists V \in \mathcal{V}(x_{0})$ astfel încât $f(x) \geq f(x_{0})$,\\ $\forall x \in V \cap D$
+\end{enumerate}
+
+\subsection{Teorema lui Fermat}
+Fie $f:I \subseteq \mathbb{R} \rightarrow \mathbb{R}$ și $x_{0} \in \mathring{I}$ astfel încât $f$ este derivabilă în $x_{0}$ și $x_{0}$ este punct de extrem local pentru $f$. Atunci $f'(x_{0}) = 0$.
+
+\paragraph{Demonstrație}
+Presupunem că $x_{0}$ este punctul de maxim local. $\Rightarrow$
+
+$\Rightarrow$ $\exists V \in \mathcal{V}(x_{0})$ astfel încât $f(x) \leq f(x_{0}), \forall x \in V \cap I$.
+
+\vspace{10pt}
+
+$
+	    \left.
+		\begin{array}{rl}
+			%0 & \text{, } l = +\infty \\
+			%+\infty & \text{, } l = 0 \\
+			%\frac{\displaystyle 1}{\displaystyle l} & \text{, } l \in (0, +\infty)
+			x \in \mathring{I} \Rightarrow I \in \mathcal{V}(x_{0}) \\
+			V \in \mathcal{V}(x_{0})
+		\end{array} \right|
+		\Rightarrow I \cap V \in \mathcal{V}(x_{0}) \Rightarrow \exists r>0$ astfel încât $(x_{0} - r, x_{0} + r) \subseteq I \cap V \Rightarrow
+$
+
+\vspace{10pt}
+
+$\Rightarrow$ $f(x) \leq f(x_{0})$, $\forall x \in (x_{0} - r, x_{0} + r)$.
+
+\vspace{10pt}
+
+$\frac{\displaystyle f(x) - f(x_{0})}{\displaystyle x - x_{0}} \geq 0$, $\forall x \in (x_{0} - r, x_{0})$
+
+\vspace{3pt}
+
+$\frac{\displaystyle f(x) - f(x_{0})}{\displaystyle x - x_{0}} \leq 0$, $\forall x \in (x_{0}, x_{0} + r)$
+
+\vspace{10pt}
+
+Obținem că $f'_{s}(x_{0}) \geq 0$ și $f'_{d}(x_{0}) \leq 0$.
+
+$f$ este derivabilă în $x_{0}$ $\Rightarrow$ $f'(x_{0}) = f's(x_{0}) = f'd(x_{0})$.
+
+Concluzie: $f'(x_{0}) = 0$.

@@ -1,0 +1,127 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+%                      %
+%       CURSUL 6       %
+%                      %
+%%%%%%%%%%%%%%%%%%%%%%%%
+\part{}
+
+\section{Derivata in $\mathbb{R}$}
+
+\subsection{Teorema lui Cauchy}
+Fie $f, g:[a, b] \rightarrow \mathbb{R}$ continue pe $[a, b]$, derivabile pe $(a, b)$ cu $g'(x) \neq 0$, $\forall x \in (a, b)$. Există $c \in (a, b)$ astfel încât
+$\displaystyle\frac{f(b) - f(a)}{g(b)-g(a)} = \displaystyle\frac{f'(c)}{g'(c)}$.
+
+\paragraph{Teorema 1.}
+Considerăm un șir de funcții derivabile $(f_{n})_{n \in \mathbb{N}}$, $f_{n}:[a, b] \rightarrow \mathbb{R}$, o funcție $g:[a, b] \rightarrow \mathbb{R}$ astfel încât
+$f_{n}' \autorightarrow{$u$}{$n \rightarrow \infty$}$ $g$ pe $[a, b]$ și $x_{0} \in [a, b]$ astfel încât $(f_{n}(x_{0}))_{n \in \mathbb{N}} \in \mathbb{R}$ este convergent.
+În aceste condiții, există o funcție derivabilă $f:[a, b] \rightarrow \mathbb{R}$ astfel încât $f_{n}$ $\autorightarrow{$u$}{$n \rightarrow \infty$}$ $f$ pe $[a, b]$ și $f' = g$.
+
+\subsection{Operații cu funcții derivabile de $n$ ori ($n \geq 2$)}
+Fie $f, g: D \subseteq \mathbb{R} \rightarrow \mathbb{R}$, $x_{0} \in D \cap D'$ și $n \in \mathbb{N}$, $n \geq 2$, astfel încât
+$f$, $g$ sunt derivabile de $n$ ori în $x_{0}$. Funcțiile $f+g$, $f-g$, $\lambda f$, $f \cdot g: D \in \mathbb{R}$ sunt derivabile
+de $n$ ori în $x_{0}$ și $(f \pm g)^{(n)}(x_{0}) = f^{(n)}(x_{0}) \pm g^{(n)}(x_{0})$. \\[20pt]
+$(\lambda f)^{(n)}(x_{0}) = \lambda f^{(n)}(x_{0})$ \\[7pt]
+$(f \cdot g)^{(n)}(x_{0}) = \displaystyle\sum_{k=0}^{n} C_{n}^{k}f^{(n-k)}(x_{0})g^{(k)}(x_{0})$
+
+\paragraph{Definiția 1.}
+Fie $f: I \rightarrow \mathbb{R}$ o funcție, $I$ un interval.
+\begin{enumerate}[label=\emph{\alph*})]
+	\item $f$ se numește convexă pe $I$ dacă $f((1-t)x + ty) \leq (1-t)f(x) + tf(y)$, $\forall x, y \in I$, $\forall t \in [0, 1]$.
+	\item $f$ se numește concavă pe $I$ dacă $f((1-t)x + ty) \geq (1-t)f(x) + tf(y)$, $\forall x, y \in I$, $\forall t \in [0, 1]$.
+\end{enumerate}
+
+\paragraph{Teorema 2.}
+Fie $f:I \rightarrow \mathbb{R}$ o funcție derivabilă pe $I$, unde $I$ este un interval. \\
+Următoarele afirmații sunt echivalente:
+
+\begin{enumerate}[label=\emph{\alph*})]
+	\item $f$ este convexă pe $I$ $\Leftrightarrow f'$ este crescătoare pe I;
+	\item $f$ este concavă pe $I$ $\Leftrightarrow f'$ este descrescătoare pe I.
+\end{enumerate}
+
+\paragraph{Corolar.}
+Dacă $f$ este derivabilă de două ori pe $I$, avem următoarele echivalențe:
+
+\begin{enumerate}[label=\emph{\alph*})]
+	\item $f$ este convexă pe $I$ $\Leftrightarrow f''(x) \geq 0$, $\forall x \in I$;
+	\item $f$ este concavă pe $I$ $\Leftrightarrow f''(x) \leq 0$, $\forall x \in I$.
+\end{enumerate}
+
+\paragraph{Teorema 3.}
+Fie $f:I \rightarrow \mathbb{R}$, $I$ interval, $n \in \mathbb{N}$, $n \geq 2$, $x_{0} \in I \cap I'$ astfel încât $f$ este de $n$ ori derivabilă în $x_{0}$ și
+$f'(x_{0}) = f''(x_{0}) = \mathellipsis = f^{(n-1)}(x_{0}) = 0$.
+
+\begin{enumerate}[label=\emph{\alph*})]
+	\item Dacă $n = 2k$ și $f_{(n)}(x_{0}) > 0$, atunci $x_{0}$ este punct de minim local pentru $f$
+	\item Dacă $n = 2k$ și $f_{(n)}(x_{0}) < 0$, atunci $x_{0}$ este punct de minim local pentru $f$
+	\item Dacă $n = 2k+1$, $x_{0} \in \mathring{I}$ și $f_{(n)}(x_{0}) < 0$, atunci $x_{0}$ nu este punct de extrem local pentru $f$
+\end{enumerate}
+
+\section{Spații normate}
+Fie $X$ spațiu vectorial peste corpul $K \in \{ \mathbb{R}, \mathbb{C} \}$.
+
+\paragraph{Definiția 1.}
+Se numește normă pe $X$ o funcție $p:X \rightarrow \mathbb{R}_{+}$ care are următoarele proprietăți:
+\begin{enumerate}[label=\emph{\alph*})]
+	\item $p(x+y) \leq p(x) + p(y)$, $\forall x, y \in X$
+	\item $p(\lambda x) = \lvert \lambda \rvert p(x)$, $\forall x \in X$, $\forall \lambda \in K$
+	\item $p(x) = 0 \Leftrightarrow x = 0_{x}$
+\end{enumerate}
+
+\paragraph{NOTAȚIE}
+
+$p(x)$ $^{\ushortdw{not}}$ $\lVert x \rVert$ - norma elementului $x$.
+
+\hspace{56pt} $P$ $^{\ushortdw{not}}$ $\lVert$ $\rVert$.
+
+\paragraph{Definiția 2.}
+Se numește spațiu normat un spațiu vectorial $X$ peste $K \in \{ \mathbb{R}, \mathbb{C} \}$ pe care se definește o normă $\lVert$ $\rVert$.
+
+\paragraph{NOTAȚIE}
+$(X, \lVert$ $\rVert)$
+
+\paragraph{Teorema 1.}
+Orice spațiu normat $(X, \lVert$ $\rVert)$ este spațiu metric. Reciproca teoremei este falsă!.
+
+\paragraph{Definiția 3.}
+Distanța construită în Teorema 1 se numește distanța asociată \\ 
+normei $\lVert$ $\rVert$.
+
+\paragraph{Definiția 4.}
+Prin topologia normei $\lVert$ $\rVert$ se înțelege topologia generată de distanța asociată normei.
+
+\paragraph{NOTAȚIE}
+$\tau_{\displaystyle\lVert}$ $_{\displaystyle\rVert}$
+
+\paragraph{Definiția 5.}
+Se numește spațiu Banach un spațiu normat în care orice șir Cauchy este convergent.
+
+\paragraph{Definiția 6.}
+Se numește aplicație liniară o funcție $\mathcal{T}:(X, \lVert$ $\rVert_{X}) \rightarrow (Y, \lVert$ $\rVert_{Y})$ pentru care \\
+$\mathcal{T}(x+y) = \mathcal{T}(x) + \mathcal{T}(y)$, $\forall x, y \in X$; \\
+$\mathcal{T}(\lambda x) = \lambda \mathcal{T}(x)$, $\forall x \in X$, $\forall \lambda \in K$.
+
+\paragraph{Definiția 7.}
+Se numește aplicație continuă între spațiile normate $(X, \lVert$ $\rVert_{X})$ și $(Y, \lVert$ $\rVert_{Y})$ orice funcție continuă
+$\mathcal{T}:(X, \tau_{\lVert}$ $_{\rVert_{X}}) \rightarrow (Y, \tau_{\lVert}$ $_{\rVert_{Y}})$.
+
+\paragraph{NOTAȚIE}
+$\mathcal{L}(X, Y)$ $^{\ushortdw{def}}$ $\{\mathcal{T}:X \rightarrow Y \vert \mathcal{T}$ este aplicație liniară și continuă$\}$.
+
+\paragraph{Definiția 8.}
+Normele $p_{1}$, $p_{2}:X \rightarrow \mathbb{R}_{+}$ se numesc echivalente dacă $\exists c_{1}$ și $c_{2} > 0$ astfel încât \\
+$c_{1}p_{1}(x) \leq p_{2}(x) \leq c_{2}p_{1}$, $\forall x \in X$.
+
+\paragraph{NOTAȚIE}
+$p_{1} \sim p_{2}$
+
+\paragraph{Teorema 2.}
+Fie $p_{1}$, $p_{2}:X \rightarrow \mathbb{R}_{+}$ două norme. Următoarele afirmații sunt echivalente:
+\begin{enumerate}[label=\emph{\alph*})]
+	\item $p_{1} \sim p_{2}$
+	\item $\tau_{p_{1}} = \tau_{p_{2}}$
+\end{enumerate}
+
+\paragraph{Teorema 3.}
+O aplicație liniară $\mathcal{T}:(X, \lVert$ $\rVert_{X}) \rightarrow (Y, \lVert$ $\rVert_{Y})$ este continuă dacă și numai dacă $\exists c>0$ astfel încât
+$\lVert \mathcal{T} \rVert_{Y} \leq c \lVert x \rVert_{X}$, $\forall x \in X$.

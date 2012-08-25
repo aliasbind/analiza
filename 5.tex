@@ -1,0 +1,183 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+%                      %
+%       CURSUL 5       %
+%                      %
+%%%%%%%%%%%%%%%%%%%%%%%%
+\part{}
+\subsection{Teorema lui Rolle}
+Considerăm o funcție $f:[a, b] \rightarrow \mathbb{R}$ derivabilă pe $(a, b)$ și continuă pe $[a, b]$ astfel încât $f(a) = f(b)$. Atunci $\exists c \in (a, b)$ astfel încât $f'(c)=0$.
+
+\subsection*{Demonstrație}
+$[a, b]$ mulțime închisă și mărginită în $\mathbb{R}$ $\Rightarrow$ $[a, b]$ mulțime compactă în $\mathbb{R}$. \\
+$f:[a, b] \rightarrow \mathbb{R}$ este funcție continuă pe $[a, b]$. \\
+$f$ este funcție mărginită și își atinge marginile. \\
+$\exists x_{0}$, $y_{0} \in [a, b]$ astfel încât $f(x_{0}) = \displaystyle {\mathop{\mbox{min}}_{\displaystyle x \in [a, b]}} f(x)$,
+$f(y_{0}) = \displaystyle {\mathop{\mbox{max}}_{\displaystyle x \in [a, b]}} f(x)$. \\
+$x_{0}$ punct de minim global pentru $f$. \\
+$y_{0}$ punct de maxim global pentru $f$. \\
+
+\subsection*{Cazul 1.}
+
+$
+	    \left.
+		\begin{array}{rl}
+			x_{0}$, $y_{0} \in \{a, b\}$.$ \\
+			f(a) = f(b)
+		\end{array} \right|
+		f(x_{0}) = f(y_{0}) \Rightarrow f(x) = f(x_{0}) = f(y_{0})$, $\forall x \in [a,b] \Rightarrow f'(x) = 0$, $\forall x \in (a,b)
+$
+
+\subsection*{Cazul 2.}
+
+$x_{0} \in (a, b)$ sau $y_{0} \in (a, b)$ \\
+$f$ este derivabilă în $x_{0}$ sau $y_{0}$ $\xRightarrow{\displaystyle \textsc{Th. Fermat}}$ $f'(x_{0}) = 0$ sau $f'(y_{0}) = 0$.
+
+\subsection{Teorema lui Lagrange}
+Considerăm o funcție $f:[a, b] \rightarrow \mathbb{R}$ derivabilă pe $(a, b)$ și continuă pe $[a, b]$. \\
+Atunci $\exists c \in (a, b)$ astfel încât $\frac{\displaystyle f(b)-f(a)}{\displaystyle b-a} = f'(c)$.
+
+\subsection*{Demonstrație}
+Construim funcția $g:[a, b] \rightarrow \mathbb{R}$, $g(x) = f(x) - \frac{\displaystyle f(b)-f(a)}{\displaystyle b-a} \cdot x$ \\
+$g$ continuă pe $[a, b]$ \\
+$g$ derivabilă pe $(a, b)$ \\
+
+\vspace{7pt}
+
+$
+	    \left.
+		\begin{array}{rl}
+			g(a) = \frac{\displaystyle bf(a) - af(a) + af(a) - af(b)}{\displaystyle b-a} = \frac{\displaystyle bf(a) - af(b)}{\displaystyle b-a} \\
+			g(b) = \frac{\displaystyle bf(b) - af(b) + af(b) - af(a)}{\displaystyle b-a} = \frac{\displaystyle bf(a) - af(b)}{\displaystyle b-a} \\
+		\end{array} \right|
+		\Rightarrow g(a) = g(b) \Rightarrow
+$
+
+\vspace{10pt}
+
+$
+	    \left.
+		\begin{array}{rl}
+			\xRightarrow{\displaystyle \textsc{Th. Rolle}} \exists c \in (a, b)$ astfel încât $g'(c) = 0 \\
+			g'(c) = f'(c) - \frac{\displaystyle f(b)-f(a)}{\displaystyle b-a} \\
+		\end{array} \right|
+		\Rightarrow$ $f'(c) = \frac{\displaystyle f(b)-f(a)}{\displaystyle b-a}.
+$
+
+\subsection*{Corolare la teorema lui Lagrange}
+$f: I \subseteq \mathbb{R} \rightarrow \mathbb{R}$
+\begin{enumerate}[label=\emph{\arabic*})]
+	\item Dacă $f$ este derivabilă pe $I$ și $f'(x) = 0$, $\forall x \in I$, atunci $f$ este funcție constantă pe $I$.
+	\item Presupun că $f$ este derivabilă pe $I$ \\
+	\begin{itemize}
+		\item Dacă $f'(x) \geq 0$, $\forall x \in I$, atunci $f$ este crescătoare.
+		\item Dacă $f'(x) > 0$, $\forall x \in I$, atunci $f$ este strict crescătoare.
+		\item Dacă $f'(x) \leq 0$, $\forall x \in I$, atunci $f$ este descrescătoare.
+		\item Dacă $f'(x) < 0$, $\forall x \in I$, atunci $f$ este strict descrescătoare.
+	\end{itemize}
+	\item Fie $x_{0} \in I' \cap I$ astfel încât $f$ este derivabilă pe $I \setminus \{x_{0}\}$ și continuă pe $I$.\\
+	Dacă $\exists \displaystyle\lim_{x \rightarrow x_{0}} f'(x) \in \mathbb{R}$ atunci $f$ este derivabilă în $x_{0}$ și $f'(x_{0}) = \displaystyle\lim_{x \rightarrow x_{0}}f'(x)$.  
+\end{enumerate}
+
+\subsection{Teorema lui L'Hôpital}
+
+\subsubsection{Varianta $\displaystyle\frac{0}{0}$}
+Considerăm $I \subseteq \mathbb{R}$ un interval deschis, $x_{0} \in I' \setminus I$ și $f, g: I \subseteq \mathbb{R} \rightarrow \mathbb{R}$ două funcții derivabile pe $I$ astfel încât: \\
+
+\begin{enumerate}[label=\emph{\arabic*})]
+	\item $g'(x) \neq 0$, $\forall x \in I$.
+	\item $\displaystyle\lim_{x \rightarrow x_{0}}f(x) = \displaystyle\lim_{x \rightarrow x_{0}}g(x) = 0$.
+	\item $\exists \displaystyle\lim_{x \rightarrow x_{0}} \displaystyle\frac{f'(x)}{g'(x)} \in \bar{\mathbb{R}}$.
+\end{enumerate}
+
+În aceste condiții, $g(x) \neq 0$, $\forall x \in I$ și
+$\exists \displaystyle\lim_{x \rightarrow x_{0}} \displaystyle\frac{f(x)}{g(x)} = \displaystyle\lim_{x \rightarrow x_{0}} \displaystyle\frac{f'(x)}{g'(x)}$.
+
+\subsubsection{Varianta $\displaystyle\frac{\infty}{\infty}$}
+Considerăm $I \subseteq \mathbb{R}$ un interval deschis, $x_{0} \in I' \setminus I$ și $f, g: I \subseteq \mathbb{R} \rightarrow \mathbb{R}$ două funcții derivabile pe $I$ astfel încât: \\
+
+\begin{enumerate}[label=\emph{\arabic*})]
+	\item $g'(x) \neq 0$, $\forall x \in I$.
+	\item $\displaystyle\lim_{x \rightarrow x_{0}}\lvert f(x) \rvert = \displaystyle\lim_{x \rightarrow x_{0}} \lvert g(x) \rvert = +\infty$.
+	\item $\exists \displaystyle\lim_{x \rightarrow x_{0}} \displaystyle\frac{f'(x)}{g'(x)} \in \bar{\mathbb{R}}$.
+\end{enumerate}
+
+În aceste condiții, $\exists V \in \mathcal{V}(x_{0})$ astfel încât $g(x) \neq 0$, $\forall x \in V \cap I$ și
+$\exists \displaystyle\lim_{x \rightarrow x_{0}} \displaystyle\frac{f(x)}{g(x)} = \displaystyle\lim_{x \rightarrow x_{0}} \displaystyle\frac{f'(x)}{g'(x)}$.
+
+\subsection{Teorema lui Darboux}
+Pentru orice funcție derivabilă $f:I \subseteq \mathbb{R} \rightarrow \mathbb{R}$, $f'$ are proprietatea lui Darboux.
+
+\paragraph{Coroloar}
+Presupun că $f:I \subseteq \mathbb{R} \rightarrow \mathbb{R}$ este derivabilă pe $I$ și că $f'(x) \neq 0$, $\forall x \in I$.
+
+Atunci $f'(x) > 0$, $\forall x \in I$
+
+\hspace{13pt} sau $f'(x) < 0$, $\forall x \in I$
+
+\paragraph{Demonstrație}
+Presupun că $\exists a$, $b \in I$ astfel încât $f'(a) < 0$ și $f'(b) > 0$, $a \neq b \in I$ \\
+$
+	    \left.
+		\begin{array}{rl}
+			0 \in (f'(a), f'(b)) \\
+			f'$ are proprietatea lui Darboux$
+		\end{array} \right|
+		\exists c \in I$ situat între $a$ și $b$ astfel încât $f'(c) = 0
+$
+$\Rightarrow$ Contradicție!
+
+\section{Derivate de ordin superior}
+\subsection{Formula lui Taylor}
+$f:D \subseteq \mathbb{R} \rightarrow \mathbb{R}$, $x_{0} \in D \cap D'$
+
+\paragraph{Definiția 1.}
+Spunem că $f$ este de două ori derivabilă în $x_{0}$ dacă $\exists V \in \mathcal{V}(x_{0})$ astfel încât $f$ este derivabilă pe $V \cap D$ și $f'$ este derivabilă în $x_{0}$.
+
+\paragraph{NOTAȚIE}
+$f''(x_{0}) = (f')'(x_{0})$
+
+\paragraph{Definiția 2.}
+Spunem că $f$ este de $n \in \mathbb{N}$ ori derivabilă în $x_{0} (n \geq 2)$ dacă $\exists V \in \mathcal{V}(x)$ astfel încât $f$ este derivabilă de $n-1$ ori pe $V \cap D$ și
+$f^{(n-1)}$ este derivabilă în $x_{0}$.
+
+\paragraph{NOTAȚIE}
+$f^{(n)}(x_{0}) = (f^{(n-1)}(x_{0}))'$.
+
+\paragraph{Definiția 3.}
+Spunem că $f$ este de $n$ ori derivabilă pe $D (n \geq 2)$ dacă este derivabilă de $n$ ori în orice punct al mulțimii $D$.
+
+\paragraph{Definiția 4.}
+Considerăm $f:D \subseteq \mathbb{R} \rightarrow \mathbb{R}$, $x_{0} \in D \cap D'$ și $n \in \mathbb{N}$, $n \geq 1$
+astfel încât $f$ este derivabilă de $n$ ori în $x_{0}$. \\
+\indent Funcția $\mathcal{T}_{f, n, x_{0}}:D \subseteq \mathbb{R}$, \\
+\begin{equation*}
+\mathcal{T}_{f, n, x_{0}}(x) = f(x_{0}) + \displaystyle\frac{f'(x_{0})}{1!}(x - x_{0}) + \displaystyle\frac{f''(x_{0})}{2!}(x - x_{0})^{2} + \mathellipsis + 
+\displaystyle\frac{f^{(n)}(x_{0})}{n!}(x - x_{0})^{n}
+\end{equation*}
+
+se numește polinomul Taylor de rang $n$ asociat funcției $f$ și punctului $x_{0}$.
+
+\indent Funcția $\mathcal{R}_{f, n, x_{0}}: D \subseteq \mathbb{R} \rightarrow \mathbb{R}$,
+\begin{equation*}
+\mathcal{R}_{f, n, x_{0}}(x) = f(x) - \mathcal{T}_{f, n, x_{0}}(x)
+\end{equation*}
+
+se numește restul lui Taylor de grad $n$.
+
+\paragraph{Formula lui Taylor}
+Considerăm $f: I \subseteq \mathbb{R} \rightarrow \mathbb{R}$, $n \in \mathbb{N}^{*}$, $\exists x_{0} \in I \cap I'$ astfel încât $f$ este de $n$ ori derivabilă în $x_{0}$.
+Atunci $\exists \mathcal{W}:I \subseteq \mathbb{R} \rightarrow \mathbb{R}$ astfel încât $\mathcal{W}(x_{0}) = 0$ este continuă în $x_{0}$ și are loc egalitatea
+
+\begin{equation*}
+f(x) = \mathcal{T}_{f, n, x_{0}}(x) + (x - x_{0})^{n} \mathcal{W}(x)
+\end{equation*}
+$\forall x \in I$.
+
+\subsection{Formula lui Taylor cu restul sub forma lui Lagrange}
+Considerăm $f:I \subseteq \mathbb{R} \rightarrow \mathbb{R}$, $n \in \mathbb{N}^{*}$ astfel încât $f$ este de $n+1$ ori derivabilă pe $I$. Pentru orice elemente
+$x \neq x_{0} \in I$, $\exists c \in I$ situat între $x$ și $x_{0}$ astfel încât are loc formula
+
+\begin{equation*}
+f(x) = \mathcal{T}_{f, n, x_{0}}(x) + \displaystyle\frac{f^{(n+1)}(c)}{(n+1)!}(x - x_{0})^{n+1}
+\end{equation*}
+\pagebreak

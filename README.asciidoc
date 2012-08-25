@@ -1,0 +1,18 @@
+All credit goes to Petre Iliaș from the Faculty of Computer Science,
+University of Bucharest who held the course. I just "recopied" what I wrote
+on my notebook during the semester, because my writing was very ugly and the
+courses were not organized at all. This helped me learn LaTeX and study more
+easily for the exam.
+
+Keep in mind that the courses are in Romanian *only* and not very accurate.
+I didn't have the time to check if what is written in there is 100% true.
+
+To compile, open up a terminal and execute +make+ in the directory where
+this repository was cloned. On ubuntu, you will need to have the
++texlive-full+ package installed. As for other operating systems, check the
++include.tex+ file for what LaTeX modules you might require.
+
+The structure of the source code is very straightforward: files +1.tex+
+through +14.tex+ contain the courses 1 to 14, +title.tex+ contains the cover
+of the resulting PDF and +include.tex+ includes all the needed modules. The
+bibliography is stored in +bibl.bib+ as a BibTeX file.

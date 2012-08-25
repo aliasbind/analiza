@@ -1,0 +1,186 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+%                      %
+%       CURSUL 1       %
+%                      %
+%%%%%%%%%%%%%%%%%%%%%%%%
+\part{}
+
+\section{Șiruri de funcții reale}
+
+\paragraph{}
+Fie $(f_{n})_{n \in \mathbb{Z}}.$
+
+$f_{n}: D \subseteq \mathbb{R} \rightarrow \mathbb{R}$
+
+\paragraph{Definiția 1.}
+Spunem că șirul de funcții $(f_{n})_{n \in \mathbb{Z}}$ converge simplu pe
+mulțimea $A \subseteq D$ dacă $\forall \, \, x \in A$, șirul
+$(f_{n})_{n \in \mathbb{Z}} \subseteq \mathbb{R}$ este convergent.
+
+\paragraph{NOTAȚIE}
+$\displaystyle\lim_{n \rightarrow \infty} f_{n}(x) = f(x)$,
+$\, f_n \, \autorightarrow{$s$}{$n\rightarrow\infty$} f$
+pe mulțimea $A$, $f: A \rightarrow \mathbb{R}$
+
+\paragraph{Definiția 2.}
+
+Spunem că șirul de funcții $(f _{n} ) _{ n\in\mathbb{Z} }$ converge uniform
+pe mulțimea $A \subseteq D$ dacă $\exists \, f:A \rightarrow \mathbb{R}$ cu
+proprietatea că $\forall \, \varepsilon>0, \exists \, n_{\varepsilon} \in
+\mathbb{N}$ astfel încât $\lvert f_{n}(x) - f(x) \rvert < \varepsilon,
+\forall \, n \geq n_{\varepsilon}, \forall \, x \in A.$
+
+\paragraph{NOTAȚIE}
+$f_{n} \autorightarrow{$u$}{$n\rightarrow\infty$} f$ pe mulțimea $A$.
+
+\paragraph{Observație}
+$f_{n} \autorightarrow{$u$}{$n\rightarrow\infty$} f$ pe mulțimea $A
+\subseteq D \Rightarrow f_n$ $\autorightarrow{$s$}{$n\rightarrow\infty$} f$
+pe mulțimea $A$.
+
+\hspace{187pt}
+$\nLeftarrow$
+
+\subsection{Criteriul practic de convergență uniformă pentru un șir de
+funcții}
+Următoarele afirmații sunt echivalente:
+\begin{enumerate}[label=\emph{\alph*})]
+    \item $f_{n} \autorightarrow{$u$}{$n\rightarrow\infty$} f$ pe mulțimea
+	    $A \subseteq D$.
+    \item $\displaystyle\lim_{n \rightarrow \infty}(\sup_{x \in A} \lvert
+	    f_{n}(x) - f(x) \rvert) = 0$
+\end{enumerate}
+
+\subsection{Criteriul lui Cauchy pentru limite de funcții}
+Următoarele afirmații sunt echivalente:
+\begin{enumerate}[label=\emph{\alph*})]
+	\item $(f_{n})_{n \in \mathbb{N}}$ converge uniform pe mulțimea
+		$A \subseteq D$
+	\item $\forall \, \varepsilon>0$, $\exists \, n_{\varepsilon} \in
+		\mathbb{N}$ astfel încât $\vert f_{n}(x) - f_{m}(x) \rvert <
+		\varepsilon$, $\forall \, n, m \geq n_{\varepsilon}$,
+		$\forall \, x \in A$
+\end{enumerate}
+
+\subsection{Teorema lui Weierstrass}
+Considerăm un șir de funcții $(f_{n})_{n \in \mathbb{N}}$, o funcție $f:A
+\subseteq D \rightarrow \mathbb{R}$ astfel încât $f_{n}
+\autorightarrow{$u$}{$n \rightarrow \infty$} f$ pe mulțimea $A$. Dacă
+$\exists \, x_{0} \in A$ astfel încât $f_{n}$ este continuă în $x_{0}$,
+$\forall \, n \in \mathbb{N}$, atunci $f$ este continuă în $x_{0}$.
+
+\subsection{Teorema Stone-Weierstrass}
+Pentru orice funcție continuă $f:[a,b] \rightarrow \mathbb{R}$, există un
+șir de funcții polinomiale $(p_{n})_{n \in \mathbb{N}}$ astfel încât $p_{n}
+\autorightarrow{$u$}{$n \rightarrow \infty$} f$ pe mulțimea $[a, b]$.
+
+\subsection{Teorema lui Dini}
+Considerăm un șir monoton de funcții continue $(f_{n})_{n \in \mathbb{N}}$,
+$f_{n}: [a, b] \rightarrow \mathbb{R}$ ($f_{n} \leq f_{n+1}$, $\forall \, n
+\in \mathbb{N}$) sau ($f_{n} \geq f_{n+1}$, $\forall \, n \in \mathbb{N}$)
+și o funcție continuă $f: [a, b] \rightarrow \mathbb{R}$ astfel încât $f_{n}
+\autorightarrow{$s$}{$n \rightarrow \infty$} f$ pe mulțimea $[a, b]$.
+
+Atunci $f_{n} \autorightarrow{$u$}{$n \rightarrow \infty$} f$ pe mulțimea
+$[a, b]$.
+
+\subsection{Teorema lui Polya}
+Considerăm un șir de funcții continue și monotone $(f_{n})_{n \in
+\mathbb{N}}$, $f_{n}:[a,b] \rightarrow \mathbb{R}$ și o funcție continuă
+$f:[a,b] \rightarrow \mathbb{R}$ astfel încât
+$f_{n} \autorightarrow{$s$}{$n \rightarrow \infty$} f$ pe mulțimea $[a, b]$.
+
+Atunci $f_{n} \autorightarrow{$u$}{$n \rightarrow \infty$} f$ pe mulțimea
+$[a, b]$.
+
+\section{Serii de funcții reale}
+
+$(f_{n})_{n \in \mathbb{N}}$; $f_{n}: D \subseteq \mathbb{R} \rightarrow
+\mathbb{R}$ \\
+$(f_{n})_{n \in \mathbb{N}}$ $\rightarrow$ $(s_{n})_{n \in \mathbb{N}}$ \\
+$s_{n}:D \subseteq \mathbb{R} \rightarrow \mathbb{R}$ \\
+$s_{n}(x) = f_{0}(x) + f_{1}(x) + \mathellipsis + f_{n}(x)$
+
+\paragraph*{Definiția 1.}
+
+Perechea de șiruri de funcții ($(f_{n})_{n \in \mathbb{N}}$, $(s_{n})_{n \in
+\mathbb{N}}$) se numește seria de funcții atașată șirului de funcții
+$(f_{n})_{n \in \mathbb{N}}$ și se notează
+$\displaystyle\sum_{n=0}^{+\infty} f_{n}$.
+
+\paragraph*{Definiția 2.}
+\begin{enumerate}[label=\emph{\alph*})]
+    \item Spunem că seria de funcții $\displaystyle\sum_{n =
+	    0}^{+\infty}f_{n}$ este simplu convergentă pe mulțimea $A
+	    \subseteq D$ dacă șirul de funcții $(s_{n})_{n \in \mathbb{N}}$
+	    converge simplu pe mulțimea $A$.
+    \item Spunem că seria de funcții $\displaystyle\sum_{n =
+	    0}^{+\infty}f_{n}$ este absolut convergentă pe mulțimea $A
+	    \subseteq D$ dacă seria de funcții $\displaystyle\sum_{n =
+	    0}^{+\infty} \lvert f_{n} \rvert$ este simplu convergentă pe
+	    mulțimea $A$.
+    \item Spunem că seria de funcții $\displaystyle\sum_{n =
+	    0}^{+\infty}f_{n}$ este uniform convergentă pe mulțimea $A
+	    \subseteq D$ dacă șirul de funcții $(s_{n})_{n \in \mathbb{N}}$
+	    converge uniform pe mulțimea $A$.
+\end{enumerate}
+
+\paragraph*{Observații}
+\begin{enumerate}[label=\emph{\alph*})]
+    \item Din seria de funcții $\displaystyle\sum_{n = 0}^{+\infty}f_{n}$
+	    este absolut convergentă pe mulțimea $A \subseteq D$, atunci ea
+	    este simplu convergentă pe mulțimea $A \subseteq D$.
+    \item Dacă seria de funcții $\displaystyle\sum_{n = 0}^{+\infty}f_{n}$
+	    este uniform convergentă pe mulțimea $A \subseteq D$, atunci ea
+	    este simplu convergentă pe mulțimea $A \subseteq D$
+\end{enumerate}
+
+\subsection{Criteriul lui Cauchy pentru serii de funcții}
+Următoarele afirmații sunt echivalente:
+\begin{enumerate}[label=\emph{\alph*})]
+    \item seria de funcții $\displaystyle\sum_{n = 0}^{+\infty}f_{n}$ este
+	    uniform convergentă pe mulțimea $A \subseteq D$.
+    \item $\forall \, \varepsilon > 0$, $\exists \, n_{\varepsilon} \in
+	    \mathbb{N}$ astfel încât $\lvert f_{n}(x) + f_{n+1}(x) +
+	    \mathellipsis + f_{n+p}(x) \rvert < \varepsilon$, $\forall \, n
+	    \geq n_{\varepsilon}$, $\forall \, p \in \mathbb{N}$, $\forall
+	    \, x \in A$.
+\end{enumerate}
+
+\subsection{Criteriul lui Weierstrass pentru serii de funcții}
+Fie $(f_{n})_{n \in \mathbb{N}}$ un șir de funcții, $f_{n}:D \subseteq
+\mathbb{R} \rightarrow \mathbb{R}$, $(a_{n})_{n \in \mathbb{N}} \subseteq
+\mathbb{R}_{+}$, $A \subseteq D$ astfel încât $\lvert f_{n}(x) \rvert \leq
+a_{n}$, $\forall \, x \in A$, $\forall \, n \in \mathbb{N}$. Dacă seria de
+numere reale $\displaystyle\sum_{n = 0}^{+\infty}a_{n}$ este convergentă,
+atunci seria de funcții $\displaystyle\sum_{n = 0}^{+\infty}f_{n}$ este
+uniform convergentă pe mulțimea $A$.
+
+\paragraph{Demonstrație}
+$\displaystyle\sum_{n = 0}^{+\infty}a_{n}$ este convergentă $\Rightarrow$ 
+
+$\Rightarrow$$\forall \, \varepsilon > 0$, $\exists \, n_{\varepsilon} \in
+\mathbb{N}$ astfel încât $\lvert a_{n} + a_{n+1} + \mathellipsis + a_{n+p}
+\rvert < \varepsilon$, $\forall \, n \geq n_{\varepsilon}$, $\forall \, p
+\in \mathbb{N}$ $\Rightarrow$
+
+$\Rightarrow$$\forall \, \varepsilon > 0$, $\exists \, n_{\varepsilon} \in
+\mathbb{N}$ astfel încât $a_{n} + a_{n+1} + \mathellipsis + a_{n+p} <
+\varepsilon$, $\forall \, n \geq n_{\varepsilon}$, $\forall \, p \in
+\mathbb{N}$ \ding{172} \\[5pt]
+
+$\lvert f_{n}(x)+f_{n+1}(x)+\mathellipsis+f_{n+p}(x) \rvert \leq \lvert
+f_{n}(x) \rvert + \lvert f_{n+1}(x) \rvert + \mathellipsis + \lvert
+f_{n+p}(x) \rvert \leq a_{n}(x)+a_{n+1}(x)+\mathellipsis+a_{n+p}(x)$,
+$\forall \, x \in A$, $\forall \, n,p \in \mathbb{N}$. \ding{173} \\[15pt]
+
+Din \ding{172} și \ding{173} $\Rightarrow$ $\forall \, \varepsilon > 0$,
+$\exists \, n_{\varepsilon} \in \mathbb{N}$ astfel încât \\
+
+$\lvert f_{n}(x)+f_{n+1}(x)+\mathellipsis+f_{n+p}(x) \rvert < \varepsilon$,
+$\forall \, n \geq n_{\varepsilon}$, $\forall \, p \in \mathbb{N}$, $\forall
+\, x \in A$. \\
+
+$\xRightarrow{Cauchy}$ seria de funcții
+$\displaystyle\sum_{n=0}^{+\infty}f_{n}$ este uniform și absolut convergentă
+pe $A$.

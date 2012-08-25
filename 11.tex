@@ -1,0 +1,126 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+%                      %
+%       CURSUL 11      %
+%                      %
+%%%%%%%%%%%%%%%%%%%%%%%%
+\part{}
+\section{Puncte de extrem local pentru funcții care depind de mai multe variabile reale}
+$f:D \subseteq \mathbb{R}^{k} \rightarrow \mathbb{R}$
+
+\paragraph{Definiția 1.}
+\begin{enumerate}[label=\emph{\alph*})]
+    \item $x_{0} \in D$ se numește punct de maxim local pentru $f$ dacă $\exists$ $V \in \mathcal{V}(x_{0})$ astfel încât
+        $f(x) \leq f(x_{0})$, $\forall x \in V \cap D$.
+    \item $x_{0} \in D$ se numește punct de minim local pentru $f$ dacă $\exists$ $V \in \mathcal{V}(x_{0})$ astfel încât
+        $f(x) \geq f(x_{0})$, $\forall x \in D \cap V'$.
+\end{enumerate}
+
+\paragraph{Definiția 2.}
+$x_{0} \in D \cap D'$ se numește punct critic pentru $f$ dacă $f$ este diferențiabilă în $x_{0}$ și $df_{x_{0}}=0$.
+
+\paragraph{Observație}
+$x_{0} \in D \cap D'$ este punct critic pentru $f \Leftrightarrow $
+\begin{itemize}
+    \item $f$ este diferențiabilă în $x_{0}$
+    \item $\left\{
+        \begin{array}{rl}
+            \displaystyle\frac{\partial f}{\partial x_{1}}(x_{0})=0 \\
+            \displaystyle\frac{\partial f}{\partial x_{2}}(x_{0})=0 \\
+            \vdots \\
+            \displaystyle\frac{\partial f}{\partial x_{k}}(x_{0})=0 \\
+        \end{array}
+        \right.$
+\end{itemize}
+
+\subsection{Teorema lui Fermat. Cazul multidimensional}
+Fie $f:D \subseteq \mathbb{R}^{k} \rightarrow \mathbb{R}$, $x_{0} \in \mathring{D}$ astfel încât $f$ este diferențiabilă în $x_{0}$ și
+$x_{0}$ este punct de extrem local pentru $f$. Atunci $x_{0} \in \mathring{D}$ este punct critic pentru $f$.
+
+\subsection{Criteriul lui Sylvester}
+Fie $f:D \subseteq \mathbb{R}^{k} \rightarrow \mathbb{R}$, $x_{0} \in \mathring{D}$ astfel încât $f$ este diferențiabilă de două
+ori în $x_{0}$ și $x_{0}$ este punct critic pentru $f$.
+\begin{enumerate}[label=\emph{\alph*})]
+    \item Dacă $d^{2}f_{x_{0}} > 0$, atunci $x_{0}$ este punct de minim local pentru $f$
+    \item Dacă $d^{2}f_{x_{0}} < 0$, atunci $x_{0}$ este punct de maxim local pentru $f$
+\end{enumerate}
+
+\paragraph{Remarcă}
+$d^{2}f_{x_{0}}:\mathbb{R}^{k} \times \mathbb{R}^{k} \rightarrow \mathbb{R}$ \\
+$d^{2}f_{x_{0}} \rightarrow A = \left( \displaystyle\frac{\partial^{2} f}{\partial x_{i} \partial x_{j}}(x_{0}) \right)_{1 \leq i, j \leq k} \in \mathcal{M}_{k}(\mathbb{R})$\\
+
+$\Delta_{1} = \displaystyle\frac{\partial^{2} f}{\partial^{2} x_{1}}(x_{0})$
+
+$\Delta_{2} = \left|
+                \begin{array}{ccc}
+                    \displaystyle\frac{\partial^{2} f}{\partial^{2} x_{1}}(x_{0}) && \displaystyle\frac{\partial^{2} f}{\partial x_{1} \partial x_{2}}(x_{0})\\
+                    \displaystyle\frac{\partial^{2} f}{\partial x_{2} \partial x_{1}}(x_{0}) && \displaystyle\frac{\partial^{2} f}{\partial^{2} x_{2}}(x_{0})\\
+                \end{array}
+              \right|$
+
+$\vdots$
+
+$\Delta_{k} = det \left( \displaystyle\frac{\partial^{2} f}{\partial x_{i} \partial x_{j}}(x_{0})\right)_{i,j \in \overline{1,k}}$
+\begin{itemize}
+    \item $\Delta_{1}, \Delta_{2}, \mathellipsis, \Delta_{k} > 0 \Rightarrow x_{0}$ punct de minim local pentru $f$.
+    \item $\Delta_{1} < 0, \Delta_{2} > 0, \mathellipsis, (-1)^{k} \Delta_{k} > 0 \Rightarrow x_{0}$ punct de maxim local pentru $f$.
+\end{itemize}
+Dacă $\Delta_{1}, \mathellipsis, \Delta_{k} \geq 0$ sau $\Delta_{1} \leq 0$, $\Delta_{2} \geq 0$, $\mathellipsis$, $(-1)^{k} \Delta_{k} \geq 0$,
+$\exists 1 \leq i \leq k$ astfel încât $\Delta_{i} = 0$ atunci criteriul lui Sylvester nu se poate aplica. \\
+Dacă nu suntem în niciuna din situațiile anterioare, $x_{0}$ nu este punct de extrem local pentru $f$.
+
+\section{Funcții integrabile Riemann}
+\subsection{Diviziunea unui interval $[a,b]$, norma diviziunii, sistemul de puncte intermediare ale unei diviziuni}
+\begin{equation}
+    I = [a,b]
+\end{equation}
+
+\paragraph{Definiția 1.}
+Se numește diviziune a intervalului $[a,b]$ o mulțime finită $\Delta = \{x_{0}, x_{1}, \mathellipsis, x_{p-1}, x_{p} \}$ unde 
+$x_{0} = a < x_{1} < x_{2} < \mathellipsis < x_{p-1} < x_{p} = 0$
+
+\paragraph{NOTAȚIE}
+$\mathcal{D}([a,b])$ = mulțimea tuturor diviziunilor invervalului $[a,b]$. \\
+$\Delta: a = x_{0} < x_{1} < \mathellipsis < x_{p-1} < x_{p} = b$
+
+\paragraph{Definiția 2.}
+$\Delta \in \mathcal{D}([a,b])$, $\Delta: a = x_{0} < x_{1} < \mathellipsis < x_{p-1} < x_{p} = b$ \\
+Norma diviziunii $\Delta$ este numărul real $\Vert \Delta \Vert$ $^{\ushortdw{def}}$ $max \{x_{1} - x_{0}, x_{2} - x_{1}, \mathellipsis, x_{p} - x_{p-1} \}$.
+
+\paragraph{Exemplu}
+$[0, 1]$ \\
+$\Delta: 0 < \displaystyle\frac{1}{n} < \displaystyle\frac{2}{n} < \mathellipsis < \displaystyle\frac{n-1}{n} < 1$ \\
+$\Vert \Delta_{n} \Vert = max \left\{\displaystyle\frac{1}{n}, \displaystyle\frac{1}{n}, \mathellipsis, \displaystyle\frac{1}{n} \right\} = \displaystyle\frac{1}{n}$.
+
+\paragraph{Definiția 3.}
+Se numește sistem de puncte intermediare al diviziunii $\Delta$ mulțimea finită $T = \{ t_{1}, t_{2}, \mathellipsis, t_{p} \}$ unde 
+$\left\{
+    \begin{array}{l}
+        t_{1} \in [x_{0}, x_{1}] \\
+        t_{2} \in [x_{1}, x_{2}] \\
+        \hdots \\
+        t_{p} \in [x_{p-1}, x_{p}] \\
+    \end{array}
+\right.$
+
+\subsection{Sume Riemann. Sume Darboux}
+$f:[a,b] \rightarrow \mathbb{R}$ \\
+$\Delta: a = x_{0} < x_{1} < \mathellipsis < x_{p-1} < x_{p} = b$ \\
+$T = \{ t_{1}, t_{2}, \mathellipsis, t_{p} \}$
+
+\paragraph{Definiția 4.}
+Se numește sumă Riemann asociată funcției $f$, diviziunii $D$ și sistemului de puncte intermediare numărul real 
+$\sigma_{\Delta}(f, T) = f(t_{1})(x_{1} - x_{0}) + f(t_{2})(x_{2}-x{1}) + \mathellipsis + f(t_{p})(x_{p} - x_{p-1}) = \displaystyle\sum_{i=1}^{p} f(t_{i})(x_{i}-x_{i-1})$. \\
+Alegem $f:[a,b] \rightarrow \mathbb{R}$ o funcție mărginită. \\
+\begin{itemize}
+    \item $\Delta: 0 < \displaystyle\frac{1}{n} < \displaystyle\frac{2}{n} < \mathellipsis < \displaystyle\frac{n-1}{n} < 1$ \\
+    \item $M_{i} = \displaystyle\sup_{x \in [x_{i-1}, x_{i}]} f(x)$
+    \item $m_{i} = \displaystyle\inf_{x \in [x_{i-1}, x_{i}]} f(x)$
+\end{itemize}
+
+\paragraph{Definiția 5.}
+\begin{enumerate}[label=\emph{\alph*})]
+    \item Se numește suma Darboux superioară asociată funcției $f$ și diviziunii $\Delta$ numărul real
+    $S_{\Delta}(f) = M_{1}(x_{1}-x_{0}) + M_{2}(x_{2}-x_{1}) + \mathellipsis + M_{p}(x_{p} - x_{p-1})$.
+    \item Se numește suma Darboux inferioară asociată funcției $f$ și diviziunii $\Delta$ numărul real
+    $s_{\Delta}(f) = m_{1}(x_{1}-x_{0}) + m_{2}(x_{2}-x_{1}) + \mathellipsis + m_{p}(x_{p} - x_{p-1})$.
+\end{enumerate}

@@ -1,0 +1,79 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+%                      %
+%       CURSUL 9       %
+%                      %
+%%%%%%%%%%%%%%%%%%%%%%%%
+\part{}
+\paragraph{Operații cu funcții diferențiabile}
+\begin{enumerate}[label=\emph{\alph*})]
+    \item Fie $f, g:D \subseteq \mathbb{R}^{k} \rightarrow \mathbb{R}^{p}$ și $x_{0} \in D \cap D'$ astfel încât $f$ și $g$ sunt diferențiabile în $x_{0}$.
+    Atunci $f+g$, $f-g$, $\alpha f:D \subseteq \mathbb{R}^{k} \rightarrow \mathbb{R}^{p}$ sunt diferențiabile în $x_{0}$ și
+    \begin{itemize}
+      \item $d(f+g)_{x_{0}} = df_{x_{0}} + dg_{x_{0}}$
+      \item $d(f-g)_{x_{0}} = df_{x_{0}} - dg_{x_{0}}$
+      \item $d(\alpha f)_{x_{0}} = \alpha df_{x_{0}}$
+    \end{itemize}
+    
+    \item Fie $f:D \subseteq \mathbb{R}^{k} \rightarrow \mathbb{R}$, $g:D \subseteq \mathbb{R}^{k} \rightarrow \mathbb{R}^{q}$ și $x_{0} \in D \cap D'$ astfel încât
+    $f$ și $g$ sunt diferențiabile în $x_{0}$. Atunci $f,g:D \subseteq \mathbb{R}^{k} \rightarrow \mathbb{R}^{q}$ este diferențiabilă în $x_{0}$ și
+    $d(fg)_{x_{0}} = g(x_{0}) \cdot df_{x_{0}} + f(x_{0}) \cdot dg_{x_{0}}$.
+
+    \item Fie $f:D \subseteq \mathbb{R}^{k} \rightarrow A \subseteq \mathbb{R}^{q}$ și $g:A \subseteq \mathbb{R}^{q} \rightarrow \mathbb{R}^{s}$,
+    $x_{0} \in D \cap D'$ astfel încât $f(x_{0}) \in A \cap A'$. Dacă $f$ este diferențiabilă în $x_{0}$ și $g$ este diferențiabilă în $f(x_{0})$, atunci
+    $g \circ f:D \subseteq \mathbb{R}^{k} \rightarrow \mathbb{R}^{s}$ este diferențiabilă în $x_{0}$ și $d(g \circ f)_{x_{0}} = dg_{f(x_{0})} \circ df_{x_{0}}$.
+\end{enumerate}
+
+\paragraph{Definiția 1.}
+O funcție $f:D=D_{\circ} \subseteq \mathbb{R}^{k} \rightarrow \mathbb{R}^{q}$ se numește de clasă $C^{1}$ pe mulțimea $D$ și \\
+$df:D \rightarrow \mathcal{L}(\mathbb{R}^{k}, \mathbb{R}^{q})$ este continuă.
+
+\paragraph{NOTAȚIE}
+$C_{1}(D, \mathbb{R}^{q})$ $^{\ushortdw{def}}$ $\{ f:D = D^{\circ} \subseteq \mathbb{R}^{k} \rightarrow \mathbb{R}^{q}$ $\vert$ $f$ funcție de clasă $C_{1}$ pe D \}
+
+\paragraph{Observație}
+$f \in C_{1}(D, \mathbb{R}^{k}) \Leftrightarrow
+\left\{
+    \begin{array}{rl}
+	    $admite toate derivatele parțiale pe mulțimea $ D \\
+        \displaystyle\frac{\partial f}{\partial x_{1}}, \mathellipsis, \displaystyle\frac{\partial f}{\partial x_{k}}:D \rightarrow \mathbb{R}^{q}$ sunt continue pe mulțimea $ D\\
+    \end{array}
+\right.$
+
+\subsection{Teorema de inversiune locală}
+Fie $f:D=D^{\circ} \subseteq \mathbb{R}^{k} \rightarrow \mathbb{R}^{k}$ astfel încât $f \in C_{1}(D, \mathbb{R}^{k})$ și $x_{0} \in D$ astfel încât
+$df_{x_{0}}: \mathbb{R}^{k} \rightarrow \mathbb{R}^{k}$ este bijectivă și $(df_{x_{0}})^{-1}: \mathbb{R}^{k} \rightarrow \mathbb{R}^{k}$ este liniară și continuă. \\
+Atunci $\exists r_{1}$, $r_{2} > 0$ astfel încât $B(x_{0}, r_{1}) \subseteq D$, $f \vert_{B(x_{0}, r_{1})}: B(x_{0}, r_{1}) \rightarrow B(f(x_{0}), r_{2})$
+este bijectivă, $(f \vert_{B(x_{0}, r_{1})})^{-1} \in C_{1}(B(f(x_{0}), r_{2}), \mathbb{R}^{k})$.
+
+\subsection{Teorema funcțiilor implicite}
+Fie $f:D=D^{\circ} \subseteq \mathbb{R}^{k+p} \rightarrow \mathbb{R}^{p}$, $f = (f_{1}, f_{2}, \mathellipsis, f_{p})$ și $(x_{0}, y_{0}) \in \mathbb{R}^{k+p}$ astfel încât
+\begin{enumerate}[label=\emph{\alph*})]
+    \item $f(x_{0}, y_{0}) = (0, 0, \mathellipsis, 0) \in \mathbb{R}^{p}$
+    \item $f$ este continuă în $(x_{0}, y_{0})$
+    \item $\exists \displaystyle\frac{\partial f_{i}}{\partial x_{k+j}}:D \rightarrow \mathbb{R}^{q}$ și sunt continue în $(x_{0}, y_{0})$, $\forall 1 \leq i$, $j \leq p$.
+    \item $\left|
+           \begin{array}{ccc}
+               \displaystyle\frac{\partial f_{1}}{\partial x_{k+1}}(x_{0}, y_{0}) & \ldots & \displaystyle\frac{\partial f_{1}}{\partial x_{k+p}}(x_{0}, y_{0}) \\
+               \displaystyle\frac{\partial f_{2}}{\partial x_{k+1}}(x_{0}, y_{0}) & \ldots & \displaystyle\frac{\partial f_{2}}{\partial x_{k+p}}(x_{0}, y_{0}) \\
+               \vdots \\
+               \displaystyle\frac{\partial f_{p}}{\partial x_{k+1}}(x_{0}, y_{0}) & \ldots & \displaystyle\frac{\partial f_{p}}{\partial x_{k+p}}(x_{0}, y_{0}) \\
+           \end{array}
+           \right|$ $\neq$ $0$.
+\end{enumerate}
+Atunci $\exists r_{1}, r_{2} > 0$ astfel încât $B(x_{0}, r_{1}) \times B(y_{0}, r_{2}) \subseteq D$. \\
+$(\exists !)$ $h: B(x_{0}, r_{1}) \rightarrow B(y_{0}, r_{2})$ o funcție continuă astfel încât $h(x_{0}) = y_{0}$ și
+$f(x, h(x)) = (0,0, \mathellipsis, 0) \in \mathbb{R}^{p}$, $\forall x \in B(x_{0}, r_{1})$.
+
+\paragraph{Caz particular}
+$\mathbf{p=1}$ \\
+$f(x_{1}, \mathellipsis, x_{k}, x_{k+1}) = 0$, $(x_{0}, y_{0}) \in \mathbb{R}^{k+1}$ soluție a ecuației, $f:D=D^{\circ} \subseteq \mathbb{R}^{k+1} \rightarrow \mathbb{R}$.
+
+\begin{enumerate}[label=\emph{\alph*})]
+    \item $f(x_{0}, y_{0}) = 0$
+    \item $f$ continuă în $(x_{0}, y_{0})$
+    \item $\exists \displaystyle\frac{\partial f}{\partial x_{k+1}}:D \in \mathbb{R}$ și este continuă în $(x_{0}, y_{0})$
+    \item $\displaystyle\frac{\partial f}{\partial x_{k+1}}(x_{0}, y_{0}) \neq 0$
+\end{enumerate}
+$\exists r_{1}, r_{2} > 0$ astfel încât $B(x_{0}, r_{1}) \times B(y_{0}, r_{2}) \subseteq D$. \\
+$(\exists !)$ $h: B(x_{0}, r_{1}) \rightarrow B(y_{0}, r_{2})$ o funcție continuă astfel încât $h(x_{0}) = y_{0}$ și
+$f(x, h(x)) = 0 \in \mathbb{R}^{p}$, $\forall x \in B(x_{0}, r_{1})$.

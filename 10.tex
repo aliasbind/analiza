@@ -1,0 +1,120 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+%                      %
+%       CURSUL 10      %
+%                      %
+%%%%%%%%%%%%%%%%%%%%%%%%
+\part{}
+\section{Aplicații biliniare și continue}
+
+\paragraph{Definiția 1.}
+\begin{enumerate}[label=\emph{\alph*})]
+    \item $T: \mathbb{R}^{k} \times \mathbb{R}^{k} \rightarrow \mathbb{R}^{p}$ se numește biliniară dacă
+        \begin{itemize}
+            \item $T(\alpha u+\beta v, w) = \alpha T(u,w) + \beta T(v,w)$
+            \item $T(u, \alpha v+\beta w) = \alpha T(u,v) + \beta T(u,w)$
+        \end{itemize}
+        $\forall \alpha$, $\beta \in \mathbb{R}$, $\forall u, v, w \in \mathbb{R}^{p}$
+    \item O aplicație biliniară $T:\mathbb{R}^{k} \times \mathbb{R}^{k} \rightarrow \mathbb{R}^{p}$ se numește simetrică dacă
+        $T(u,v) = T(v,u)$, $\forall u, v \in \mathbb{R}^{k}$
+\end{enumerate}
+
+\paragraph{Definiția 2.}
+Fie $T:\mathbb{R}^{k} \times \mathbb{R}^{k} \rightarrow \mathbb{R}$ o aplicație biliniară.
+
+\begin{enumerate}[label=\emph{\alph*})]
+    \item $T$ se numește pozitivă ($T \geq 0$) dacă $T(u,u) \geq 0$, $\forall u \in \mathbb{R}^{k}$
+    \item $T$ se numește strict pozitivă ($T > 0$) dacă $T(u,u) > 0$, $\forall u \in \mathbb{R}^{k} \setminus \{0\}$
+    \item $T$ se numește negativă ($T \leq 0$) dacă $T(u,u) \leq 0$, $\forall u \in \mathbb{R}^{k}$
+    \item $T$ se numește strict negativă ($T < 0$) dacă $T(u,u) < 0$, $\forall u \in \mathbb{R}^{k} \setminus \{0\}$
+\end{enumerate}
+
+\paragraph{Propoziția 1.}
+Aplicația $T:\mathbb{R}^{k} \times \mathbb{R}^{k} \rightarrow \mathbb{R}^{p}$ este biliniară dacă și numai dacă
+$\exists$ $\{ a_{ij} \vert 1 \leq i, j \leq k \} \subseteq \mathbb{R}^{p}$ astfel încât
+$T((x_{1}, x_{2}, \mathellipsis, x_{k}), (y_{1}, y_{2}, \mathellipsis, y_{k})) = \displaystyle\sum_{i,j=1}^{k} x_{i}y_{j}a_{ij},
+\forall (x_{1}, \mathellipsis, x_{k}), (y_{1}, \mathellipsis, y_{k}) \in \mathbb{R}^{k}$. \\
+În plus, $T$ este aplicație biliniară simetrică dacă și numai dacă $a_{ij} = a_{ji}$, $\forall 1 \leq i, j \leq k$.
+
+\paragraph{Propoziția 2.}
+Fie $T:\mathbb{R}^{k} \times \mathbb{R}^{k} \rightarrow \mathbb{R}$ o aplicație biliniară simetrică și $A=(a_{ij})_{1 \leq i, j \leq k} \in \mathcal{M}_{k}(\mathbb{R})$
+matricea asociată lui $T$.
+
+\begin{enumerate}[label=\emph{\alph*})]
+    \item $T>0 \Leftrightarrow \forall 1 \leq l \leq k, det(a_{ij})_{1 \leq i, j \leq l}$
+    \item $T<0 \Leftrightarrow \forall 1 \leq l \leq k, (-1)^{l} det(a_{ij})_{1 \leq i, j \leq l} > 0$
+\end{enumerate}
+
+\paragraph{Propoziția 3.}
+Orice aplicație biliniară $T:\mathbb{R}^{k} \times \mathbb{R}^{k} \rightarrow \mathbb{R}^{p}$ este continuă.
+
+\paragraph{NOTAȚIE}
+$\mathcal{L}(\mathbb{R}^{k}, \mathbb{R}^{k}, \mathbb{R}^{p})$ $^{\ushortdw{def}}$
+$\{ T:\mathbb{R}^{k} \times \mathbb{R}^{k} \rightarrow \mathbb{R}^{p}$ $\vert$ $T$ aplicație liniară și continuă $\}$
+
+\section{Derivate parțiale de ordinul doi. \\ Diferențiala de ordinul doi}
+$f:D \subseteq \mathbb{R}^{k} \rightarrow \mathbb{R}^{p}$ \\
+$f(x_{1}, x_{2}, \mathellipsis, x_{k}) = (f_{1}(x_{1}, \mathellipsis, x_{k}), \mathellipsis, f_{p}(x_{1}, \mathellipsis, x_{k}))$ \\
+$f = (f_{1}, f_{2}, \mathellipsis, f_{p})$ \\
+$f_{1}, f_{2}, \mathellipsis, f_{p}:D \subseteq \mathbb{R}^{k} \rightarrow \mathbb{R}$
+
+\paragraph{Definiția 1.}
+Spunem că $f$ admite derivată parțială de ordinul doi, în raport cu variabilele $x_{i}$ și $x_{j}$ în punctul $x_{0} \in D \cap D'$ dacă
+$\exists$ $V \in \mathcal{V}(x_{0})$ astfel încât $f$ admite derivată parțială în raport cu variabila $x_{j}$ pe $D \cap V$ și
+$\displaystyle\frac{\partial f}{\partial x_{j}}$ admite derivată parțială în raport cu variabila $x_{i}$ în $x_{0}$.
+
+\paragraph{NOTAȚIE}
+$\displaystyle\frac{\partial^{2} f}{\partial x_{i} \partial x_{j}}(x_{0}) = 
+\displaystyle\frac{\partial}{\partial x_{i}}\left(\displaystyle\frac{\partial f}{\partial x_{j}}\right)(x_{0})$
+
+\paragraph{Observație}
+$\exists$ $\displaystyle\frac{\partial^{2} f}{\partial x_{i} \partial x_{j}}(x_{0}) \in \mathbb{R}^{p} \Leftrightarrow \exists$
+$\displaystyle\frac{\partial^{2} f_{1}}{\partial x_{i} \partial x_{j}}(x_{0})$, $\mathellipsis, 
+\displaystyle\frac{\partial^{2} f_{p}}{\partial x_{i} \partial x_{j}}(x_{0}) \in \mathbb{R}$. \\
+$\displaystyle\frac{\partial^{2} f}{\partial x_{i} \partial x_{j}}(x_{0}) = 
+\left(\displaystyle\frac{\partial^{2} f_{1}}{\partial x_{i} \partial x_{j}}(x_{0}) \text{,} \mathellipsis, 
+\displaystyle\frac{\partial^{2} f_{p}}{\partial x_{i} \partial x_{j}}(x_{0}) \right)$.
+
+\paragraph{Definiția 2.}
+Spunem că $f$ este diferențiabilă de două ori în $x_{0} \in D \cap D'$ dacă $\exists$ $V \in \mathcal{V}(x_{0})$ astfel încât
+$f$ este diferențiabilă pe $V \cap D$ și $df$ este diferențiabilă în $x_{0}$.
+
+\paragraph{NOTAȚIE}
+$d^{2}f_{x_{0}} = d(df)_{x_{0}}$, $d^{2}f_{x_{0}}: \mathbb{R}^{k} \times \mathbb{R}^{k} \rightarrow \mathbb{R}^{p}$ aplicație biliniară și continuă.
+
+\subsection{Teorema lui Schwarz}
+Dacă $f$ este diferențiabilă de două ori în $x_{0}$, atunci $f$ admite toate derivatele parțiale de ordinul doi în $x_{0}$.
+În plus, au loc următoarele egalități:
+\begin{enumerate}[label=\emph{\alph*})]
+    \item $\displaystyle\frac{\partial^{2} f}{\partial x_{i} \partial x_{j}}(x_{0}) = \displaystyle\frac{\partial^{2} f}{\partial x_{j} \partial x_{i}}(x_{0})$,
+        $\forall 1 \leq i, j \leq k$
+    \item $d^{2}f_{x_{0}}((x_{1}, \mathellipsis, x_{k}), (y_{1}, \mathellipsis, y_{k})) = \displaystyle\sum_{i,j=1}^{k}x_{i}y_{j} 
+        \displaystyle\frac{\partial^{2} f}{\partial x_{i} \partial x_{j}}(x_{0})$, $\forall (x_{1}, \mathellipsis, x_{k}), (y_{1}, \mathellipsis, y_{k}) \in \mathbb{R}^{k}$.
+\end{enumerate}
+
+\paragraph{Observații}
+\begin{enumerate}[label=\emph{\arabic*})]
+    \item Dacă $f:D \subseteq \mathbb{R}^{k} \rightarrow \mathbb{R}^{p}$ este diferențiabilă de două ori în $x_{0} \in D \cap D'$, 
+        $d^{2}f:\mathbb{R}^{k} \times \mathbb{R}^{k} \rightarrow \mathbb{R}^{p}$ este aplicație biliniară, continuă și simetrică.
+    \item Dacă $f:D \subseteq \mathbb{R}^{k} \rightarrow \mathbb{R}$ este diferențiabilă de două ori în $x_{0} \in D \cap D'$, 
+        $d^{2}f:\mathbb{R}^{k} \times \mathbb{R}^{k} \rightarrow \mathbb{R}$ este aplicație biliniară, continuă și simetrică.
+\end{enumerate}
+I se asociază matricea $A = \left( \displaystyle\frac{\partial^{2} f}{\partial x_{i} \partial x_{j}} \right)_{1 \leq i, j \leq k} \in \mathcal{M}_{k}(\mathbb{R})$
+care se numește hessiana funcției $f$ în $x_{0}$.
+
+\subsubsection{Corolare la teorema lui Schwarz}
+\begin{enumerate}[label=\emph{\arabic*})]
+    \item Dacă $f$ nu admite cel puțin o derivată parțială de ordin doi în $x_{0}$, atunci $f$ nu este diferențiabilă de două ori în $x_{0}$.
+    \item Dacă $f$ admite derivatele parțiale de ordinul doi în $x_{0}$ și $\exists$ $1 \leq i, j \leq k$ astfel încât
+        $\displaystyle\frac{\partial^{2} f}{\partial x_{i} \partial x_{j}}(x_{0}) \neq \displaystyle\frac{\partial^{2} f}{\partial x_{j} \partial x_{i}}(x_{0})$
+        atunci $f$ nu este diferențiabilă de două ori în $x_{0}$.
+\end{enumerate}
+
+\subsection{Teorema lui Young}
+Fie $f:D \subseteq \mathbb{R}^{k} \rightarrow \mathbb{R}^{p}$, $x_{0} \in \mathring{D}, V \in \mathcal{V}(x_{0})$ astfel încât
+$V \subseteq D$ și $f$ admite toate derivatele parțiale de ordin doi pe $V$ și acestea sunt funcții continue în $x_{0}$. Atunci
+$f$ este diferențiabilă de două ori în $x_{0}$.
+
+\paragraph{Corolar}
+Fie $f:D \subseteq \mathbb{R}^{k} \rightarrow \mathbb{R}^{p}$, $G = \mathring{G} \subseteq D$ astfel încât
+$f$ admite toate derivatele parțiale de ordin doi pe $G$ și acestea sunt funcții continue pe $G$.
+Atunci $f$ este diferențiabilă de două ori pe $G$.

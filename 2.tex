@@ -1,0 +1,122 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+%                      %
+%       CURSUL 2       %
+%                      %
+%%%%%%%%%%%%%%%%%%%%%%%%
+\part{}
+\section{Șiruri de numere reale}
+\subsection{Criteriul lui Dirichlet pentru serii de funcții}
+Considerăm $(f_{n})_{n \in \mathbb{N}}, (g_{n})_{n \in \mathbb{N}}$, $f_{n}, g_{n}: D \subseteq \mathbb{R} \rightarrow \mathbb{R}, \forall n \in \mathbb{N}$ cu următoarele proprietăți:
+\begin{enumerate}[label=\emph{\alph*})]
+	\item $f_{n} \autorightarrow{$u$}{$n \rightarrow \infty$} \, 0$ pe mulțimea $D$
+	\item $f_{n+1}(x) \leq f_{n}(x), \forall n \in \mathbb{N}, \forall x \in D$
+	\item $\exists M>0$ astfel încât $\lvert g_{0}(x) + g_{1}(x) + \mathellipsis + g_{n}(x) \rvert \leq M, \forall n \in \mathbb{N}, \forall x \in D$
+\end{enumerate}
+Atunci seria de funcții $\displaystyle\sum_{n=0}^{+\infty} f_{n} g_{n}$ este uniform convergentă pe $D$.
+
+\paragraph*{Definiția 1.}
+Considerăm o serie de funcții $\displaystyle\sum_{n=0}^{+\infty} f_{n}$ care este simplu convergentă pe o mulțime $A \in D$.
+Limita șirului de funcții $(s_{n})_{n \in \mathbb{N}}$ asociat șirului de funcții $(f_{n})_{n \in \mathbb{N}}$ se numește suma seriei de funcții pe mulțimea $A$.
+
+\paragraph{NOTAȚIE}
+$s_{n} = f_{0} + f{1} + \mathellipsis + f_{n}, \forall n \in \mathbb{N}$
+
+\vspace{5pt}
+\hspace{49pt}$s_{n} \autorightarrow{$s$}{$n \rightarrow \infty$}f$ pe mulțimea $A$.
+
+\hspace{49pt}$f: A \rightarrow \mathbb{R}$, $\displaystyle\sum_{n=0}^{+\infty} \ushortdw{not}$  $f$ pe mulțimea $A$.
+
+\paragraph*{Definiția 2.}
+Se numește mulțimea de convergență a seriei de funcții $\displaystyle\sum_{n=0}^{+\infty}f_{n}(x)$ mulțimea $A \subseteq D$ pe care seria de funcții este simplu convergentă.
+ 
+\paragraph*{Observație.} 
+$A = \{x \in D \, \vert$ seria $\displaystyle\sum_{n=0}^{+\infty}f_{n}$ este convergentă$\}$
+
+\pagebreak
+
+\section{Șiruri de funcții derivabile}
+$(f_{n})_{n \in \mathbb{N}}$, $f_{n}: I \subseteq \mathbb{R} \rightarrow \mathbb{R}$, $n \in \mathbb{N}$ și $I \subseteq \mathbb{R}$ interval.
+
+\paragraph*{Teorema 1.}
+Considerăm un șir de funcții derivabile $(f_{n})_{n \in \mathbb{N}}$ în
+care $I \subseteq \mathbb{R}$ este un interval mărginit ($\exists \, a<b
+\in \mathbb{R}$ astfel încât $I\subseteq[a,b]$). Presupunem că:
+\begin{itemize}
+	\item $\exists \, x_{0} \in I$ astfel încât seria $\displaystyle\sum_{n=0}^{+\infty}f_{n}(x_{0})$ este convergentă
+	\item seria de funcții $\displaystyle\sum_{n=0}^{+\infty}f_{n}'$ converge uniform pe $I$ către funcția $g:I \rightarrow \mathbb{R}$ 
+\end{itemize}
+
+În aceste condiții, există o funcție derivabilă $f: I \rightarrow \mathbb{R}$ astfel încât:
+
+\begin{enumerate}[label=\emph{\alph*})]
+	\item seria de funcții $\displaystyle\sum_{n=0}^{+\infty}f_{n}$
+    converge uniform pe $I$ către funcția $f$
+	\item $f' = g$
+\end{enumerate}
+
+\paragraph{Teorema 2.}
+Considerăm un șir de funcții derivabile $(f_{n})_{n \in \mathbb{N}}$ cu următoarele proprietăți:
+\begin{enumerate}[label=\emph{\alph*})]
+	\item seria de funcții $\displaystyle\sum_{n=0}^{+\infty}f_{n}$ converge uniform pe I către funcția $f:I \rightarrow \mathbb{R}$
+	\item seria de funcții $\displaystyle\sum_{n=0}^{+\infty}f_{n}'$ converge uniform pe I către funcția $g:I \rightarrow \mathbb{R}$
+\end{enumerate}
+
+În aceste condiții, $f$ este derivabilă pe $I$ și $f' = g$.
+
+\section{Serii de puteri}
+\paragraph{Definiția 1.}
+Se numește serie de puteri o serie de funcții $\displaystyle\sum_{n=0}^{+\infty}f_{n}$, unde $f_{n}:\mathbb{R} \rightarrow \mathbb{R}$, $f_{n}(x) = a_{n} (x-x_{0})^{n}$,
+$\forall x \in \mathbb{R}$, $\forall n \in \mathbb{N}$, în care $x_{0} \in \mathbb{R}$ fixat.
+
+\paragraph*{NOTAȚIE}
+$\displaystyle\sum_{n=0}^{+\infty}f_{n} = \displaystyle\sum_{n=0}^{+\infty}a_{n}(x-x_{0})^{n}$ 
+
+$A = \{x \in \mathbb{R} \vert$ seria $\displaystyle\sum_{n=0}^{+\infty}a_{n}(x-x_{0})^{n}$ este convergentă$\}$
+- (mulțimea de convergență a seriei de puteri
+$\displaystyle\sum_{n=0}^{+\infty}a_{n}(x-x_{0})^{n}$), $A \neq
+\emptyset$, $x_{0} \in A$.
+
+\paragraph{Definiția 2.}
+Numărul $R$ $^{\ushortdw{def}}$ $sup$$\{ \, r \geq 0$ $\vert$ $\displaystyle\sum_{n=0}^{+\infty} \lvert a_{n} \rvert \cdot r^{n}$ este convergentă\} $\in [0, +\infty] \cup \{+\infty\}$
+se numește raza de convergență absolută a seriei de puteri $\displaystyle\sum_{n=0}^{+\infty}a_{n}(x-x_{0})^{n}$. 
+
+Mulțimea $(x_{0} - R,$ $x_{0} + R) \subseteq \mathbb{R}$ se numește intervalul de convergență a seriei de puteri $\displaystyle\sum_{n=0}^{+\infty}a_{n}(x-x_{0})^{n}$. 
+
+\subsection{Teorema Cauchy - Hadamard}
+Pentru seria  de puteri $\displaystyle\sum_{n=0}^{+\infty}a_{n}(x-x_{0})^{n}$, notăm $l = \displaystyle\varlimsup_{n \rightarrow \infty} \sqrt[n]{a_{n}}$ $\in [0, +\infty] \cup \{+\infty\}$.
+
+\vspace{10pt}
+
+Are loc egalitatea
+\begin{equation*}
+	R = \left\{
+		\begin{array}{rl}
+			0 & \text{, } l = +\infty \\
+			+\infty & \text{, } l = 0 \\
+			\frac{\displaystyle 1}{\displaystyle l} & \text{, } l \in (0, +\infty)
+		\end{array} \right.
+\end{equation*}
+
+\subsection{Teorema lui Abel}
+\begin{enumerate}[label=\emph{\alph*})]
+	\item Seria de puteri $\displaystyle\sum_{n=0}^{+\infty}a_{n}(x-x_{0})^{n}$ este absolut convergentă pe $(x_{0} - R,$ $x_{0} + R)$
+	\item $\forall x \in \mathbb{R} \setminus [x_{0} - R,$ $x_{0} + R]$ seria de numere reale $\displaystyle\sum_{n=0}^{+\infty}a_{n}(x-x_{0})^{n}$ este divergentă 
+	\item Seria de puteri $\displaystyle\sum_{n=0}^{+\infty}a_{n}(x-x_{0})^{n}$ este uniform convergentă pe orice interval compact $[x_{0} - r,$ $x_{0} + r]$ unde $0 \leq r < R$.
+\end{enumerate} 
+
+\paragraph{Corolar}
+$(x_{0} - R, x_{0} - R) \subseteq A \subseteq [x_{0} - R,$ $x_{0} + R]$ și $A \subseteq \mathbb{R}$.
+\paragraph{NOTAȚIE}
+$\displaystyle\sum_{n=0}^{+\infty}a_{n}(x-x_{0})^{n}$ $ = f$, $f: A \rightarrow \mathbb{R}$ 
+
+\paragraph{Teorema 1.}
+\begin{enumerate}[label=\emph{\alph*})]
+	\item $f|_{(x_{0} - R, x_{0} + R)}$ este funcție indefinit
+        derivabilă pe $(x_{0} - R,$ $x_{0} + R)$ și \\ 
+        $f^{(k)}(x) = \displaystyle\sum_{n=0}^{+\infty}(a_{n}(x-x_{0})^{n})^{(k)}$,
+        $\forall k \in \mathbb{N}$, $\forall x \in (x_{0} - R,$ $x_{0} + R)$. 
+	\item Dacă seriile $\displaystyle\sum_{n=0}^{+\infty}a_{n}R^{n}$, $\displaystyle\sum_{n=0}^{+\infty}a_{n}(-R)^{n}$ sunt convergente, atunci $f|_{(x_{0} - R, x_{0} + R)}$ este funcție
+	indefinit derivabilă și $f$ este continuă în $x_{0} - R$ și $x_{0} + R$.
+	\item Dacă seria $\displaystyle\sum_{n=0}^{+\infty}a_{n}R^{n}$ este convergentă și $\displaystyle\sum_{n=0}^{+\infty}a_{n}(-R)^{n}$ este divergentă, $f|_{(x_{0} - R, x_{0} + R)}$ este
+	indefinit derivabilă și $f$ este continuă în $x_{0} + R$.
+\end{enumerate}

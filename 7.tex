@@ -1,0 +1,114 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+%                      %
+%       CURSUL 7       %
+%                      %
+%%%%%%%%%%%%%%%%%%%%%%%%
+\part{}
+
+\paragraph{Exemple de spații normate}
+\begin{enumerate}[label=\emph{\arabic*})]
+	\item $\mathbb{R}$ \\
+			  $dim_{\mathbb{R}} \mathbb{R} = 1$, $B = \{ 1 \}$ \\
+			  $\lvert $ $ \rvert$ $:\mathbb{R} \rightarrow \mathbb{R}_{+}$ norma pe $\mathbb{R}$
+	\item $\mathbb{R}^{k} = \{(x_{1}, \mathellipsis , x_{k}) \vert x_{i} \in \mathellipsis{R}$, $\forall 1 \leq i \leq k \}$, $k \geq 2$ \\
+			  $dim_{\mathbb{R}} \mathbb{R}^{k} = k$ \\
+			  $B = \{ e_{1}, \mathellipsis, e_{k}\}$ - baza canonică a lui $\mathbb{R}_{k}$, \\
+			  $e_{1} = (1, 0, \mathellipsis, 0)$ \\
+			  $e_{2} = (0, 1, \mathellipsis, 0)$ \\
+			  \vdots \\
+			  $e_{k} = (0, 0, \mathellipsis, 1)$ \\
+			  \begin{itemize}
+				  \item $\lVert$ $\rVert_{2}: \mathbb{R}^{k} \rightarrow \mathbb{R}_{+}$ \\
+				        $\lVert (x_{1}, \mathellipsis, x_{k}) \rVert_{2}$ $^{\ushortdw{def}}$ $\sqrt{x_{1}^{2} + x_{2}^{2} + \mathellipsis + x_{k}^{2}}$ - norma euclidiană a lui $\mathbb{R}^{k}$.
+				  \item $\lVert$ $\rVert_{1}: \mathbb{R}^{k} \rightarrow \mathbb{R}_{+}$ \\
+				        $\lVert (x_{1}, \mathellipsis, x_{k}) \rVert_{1}$ $^{\ushortdw{def}}$ $\lvert x_{1} \rvert + \lvert x_{2} \rvert + \mathellipsis + \lvert x_{k} \rvert$ - normă pe $\mathbb{R}^{k}$
+				  \item $\lVert$ $\rVert_{\infty}: \mathbb{R}^{k} \rightarrow \mathbb{R}_{+}$ \\
+				        $\lVert (x_{1}, \mathellipsis, x_{k}) \rVert_{\infty}$ $^{\ushortdw{def}}$
+						$max\{\lvert x_{1} \rvert , \lvert x_{2} \rvert , \mathellipsis , \lvert x_{k} \rvert\}$ - normă pe $\mathbb{R}^{k}$
+			  \end{itemize}
+\end{enumerate}
+
+\paragraph{Teorema 1.}
+Orice două norme definite pe $\mathbb{R}^{k}$ sunt echivalente.
+
+\paragraph{Teorema 2.}
+Orice aplicație liniară $T: \mathbb{R}^{k} \rightarrow \mathbb{R}^{p}$ este continuă.
+
+\paragraph{Observații}
+\begin{enumerate}[label=\emph{\arabic*})]
+	\item $T: \mathbb{R} \rightarrow \mathbb{R}^{p}$ aplicație liniară $\Leftrightarrow$ $\exists!$ $v \in \mathbb{R}_{p}$ astfel încât $T(x) = x \cdot v$, $\forall x \in \mathbb{R}$
+	\item $T: \mathbb{R}^{k} \rightarrow \mathbb{R}$ aplicație liniară $\Leftrightarrow$ $\exists!$ $\alpha_{1}, \mathellipsis, \alpha_{k} \in \mathbb{R}$ astfel încât
+			  $T(x_{1}, \mathellipsis, x_{k}) = \alpha_{1}x_{1} + \mathellipsis + \alpha_{k}x_{k}$, $\forall x_{1}, \mathellipsis, x_{k} \in \mathbb{R}^{k}$
+	\item $T: \mathbb{R}^{k} \rightarrow \mathbb{R}^{p}$, $k$, $p \geq 2$ aplicație liniară $\Leftrightarrow$ $\exists!$ $A \in \mathcal{M}_{p,k}(\mathbb{R})$ astfel încât \\
+			  $T(x_{1}, \mathellipsis, x_{k}) = 
+			  \left[
+			  A
+				  \left(
+				  \begin{array}{ccc}
+					  x_{1} \\
+					  x_{2} \\
+					  \vdots \\
+					  x_{k}
+				  \end{array}
+				  \right)
+			  \right]^{t}$, $\forall (x_{1}, \mathellipsis, x_{k}) \in \mathbb{R}^{k}$.
+\end{enumerate}
+
+\section{Funcții diferențiabile în spații Banach}
+$f:D \subseteq (X, \lVert \quad \rVert_{X}) \rightarrow (Y, \lVert \quad \rVert_{Y})$, $x_{0} \in D \cap D'$, $X$, $Y$ spații Banach.
+
+\paragraph{Definiția 1.}
+Funcția $f$ se numește diferențiabilă în $x_{0}$ dacă $\exists!$ $T \in \mathcal{L}(X, Y)$ ($T:X \rightarrow Y$, $T$ aplicație liniară și continuă) astfel încât
+
+\begin{equation*}
+\displaystyle\lim_{x \rightarrow x_{0}} \displaystyle\frac{\lVert f(x) - f(x_{0}) - T(x - x_{0}) \rVert_{Y}}{\lVert x - x_{0} \rVert_{X}} = 0
+\end{equation*}
+
+\paragraph{NOTAȚIE}
+$T$ $^{\ushortdw{not}}$ $df_{x_{0}}$ - diferențiala lui $f$ în $x_{0}$.
+
+\paragraph{Definiția 2.}
+$f$ se numește diferențiabilă pe $D$ dacă este diferențiabilă în orice punct al mulțimii $D$.
+
+\paragraph{Teorema 1.}
+Dacă $f:D \subseteq (X, \lVert \quad \rVert_{X}) \rightarrow (Y, \lVert \quad \rVert_{Y})$ este diferențiabilă în $x_{0} \in D \cap D'$, atunci f este continuă în $x_{0}$.
+
+\paragraph{Demonstrație}
+$\lVert f(x) - f(x_{0}) \rVert_{Y} = \displaystyle\frac{\lVert f(x) - f(x_{0}) \rVert_{Y}}{\lVert x - x_{0} \rVert_{X}} \cdot \lVert x - x_{0} \rVert_{X}$, $\forall x \neq x_{0} \in D$ \\
+$\lVert f(x) - f(x_{0}) \rVert_{Y} = \displaystyle\frac{\lVert \overbrace{f(x) - f(x_{0}) - T(x - x_{0})}^{a} + \overbrace{T(x - x_{0})}^{b} \rVert_{Y}}{\lVert x - x_{0} \rVert_{X}} \cdot 
+\lVert x - x_{0} \rVert_{X} \leq$ \\[5mm]
+$\leq \displaystyle\frac{\lVert f(x) - f(x_{0}) - T(x - x_{0}) + T(x -
+x_{0}) \rVert_{Y}}{\lVert x - x_{0} \rVert_{X}} \cdot \lVert x - x_{0}
+\rVert_{X} = \\[5mm]
+= \left(\displaystyle\frac{\lVert f(x) - f(x_{0}) - T(x - x_{0}) \rVert_{Y}}{\lVert x - x_{0} \rVert_{X}} + \displaystyle\frac{\lVert T(x - x_{0}) \rVert_{Y}}{\lVert x - x_{0} \rVert_{X}}
+_{\searrow \raisebox{-2.2ex}{0}} \right)$, \\[10mm]
+$\forall x \neq x_{0}$ \ding{172} \\
+$T \in \mathcal{L}(X, Y) \Rightarrow \exists c > 0$ astfel încât $\lVert T(y) \rVert_{Y} \leq c\lVert y \rVert_{X}$, $\forall y \in X$ \\
+$\displaystyle\frac{\lVert T(x - x_{0}) \rVert_{Y}}{\lVert x - x_{0} \rVert_{X}} \leq \displaystyle\frac{c \lVert x - x_{0} \rVert_{X}}{\lVert x - x_{0} \rVert_{X}} = c$, $\forall x \neq x_{0}$
+\vspace{8mm}
+\ding{173}\\
+Din \ding{172} și \ding{173} $\Rightarrow \exists \displaystyle\lim_{x \rightarrow x_{0}} \lVert f(x) - f(x_{0}) \rVert_{Y} = 0 \Rightarrow \exists \displaystyle\lim_{x \rightarrow x_{0}} f(x) = f(x_{0})
+\Rightarrow f$ este continuă în $x_{0}$.
+
+\subsection*{Operații cu funcții diferențiabile}
+Considerăm $f, g:D \subseteq (X, \lVert \quad \rVert_{X}) \rightarrow (Y, \lVert \quad \rVert_{Y})$, $h:D \subseteq (X, \lVert \quad \rVert_{X}) \rightarrow \mathbb{R}$ și $x_{0} \in D \cap D'$
+astfel încât $f$, $g$, $h$ sunt diferențiabile în $x_{0}$. Atunci funcțiile $f+g$, $f-g$, $\lambda f:D \subseteq X \rightarrow Y$ și $hf: D \rightarrow Y$ sunt diferențiabile în $x_{0}$ 
+și au loc formulele:
+\begin{itemize}
+	\item $d(f+g)_{x_{0}} = df_{x_{0}} + dg_{x_{0}}$
+	\item $d(f-g)_{x_{0}} = df_{x_{0}} - dg_{x_{0}}$
+	\item $d(\lambda f)_{x_{0}} = \lambda f_{x_{0}}$
+	\item $d(hf)_{x_{0}} = dh_{x_{0}} \cdot f(x_{0} + h(x_{0}) \cdot df_{x_{0}}$
+\end{itemize}
+
+\paragraph{Teorema 3.}
+Dacă $f:D \subseteq X \rightarrow Y$ este funcție continuă ($\exists y_{0} \in Y$ astfel încât $f(x) = y_{0}$, $\forall x \in D$), atunci $f$ este diferențiabilă pe mulțimea
+$D$ și $df_{x_{0}} = 0$ (funcția nulă).
+
+\paragraph{Teorema 4.}
+Dacă $f:X \rightarrow Y$ este aplicație liniară și continuă atunci $f$ este diferențiabilă pe mulțimea $X$ și $df_{x_{0}} = f$, $\forall x_{0} \in X$.
+
+\paragraph{Teorema 5.}
+Considerăm $f:D \subseteq X \rightarrow B \subseteq Y$ și $g:B \subseteq Y \rightarrow Z$, $x_{0} \in D \cap D'$ astfel încât $f(x_{0}) \in B \cap B'$.
+Dacă $f$ este diferențiabilă în $x_{0}$ și $g$ este diferențiabilă în $f(x_{0})$, atunci $g \circ f:D \subseteq X \rightarrow Z$ este diferențiabilă în $x_{0}$ și
+$d(g \circ f)_{x_{0}} = dg_{f(x_{0})} \circ df_{x_{0}}$.

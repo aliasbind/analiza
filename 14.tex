@@ -1,0 +1,74 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+%                      %
+%       CURSUL 14      %
+%                      %
+%%%%%%%%%%%%%%%%%%%%%%%%
+\part{}
+\subsection{Criterii de convergență pentru integralele improprii}
+$f:[a,b) \rightarrow \mathbb{R}$ local integrabilă pe $[a,b)$.
+
+\subsubsection{Criteriul de comparație cu inegalități}
+Fie $f, g \in \mathcal{R}_{loc}([a,b))$ astfel încât $0 \leq f(x) \leq g(x)$, $\forall \, x \in [a,b)$. \\[5pt]
+Dacă $\displaystyle\int_{a}^{b-0} g(x) \, dx$ este convergentă atunci $\displaystyle\int_{a}^{b-0} f(x) \, dx$ este convergentă. \\
+Dacă $\displaystyle\int_{a}^{b-0} f(x) \, dx$ este divergentă atunci $\displaystyle\int_{a}^{b-0} g(x) \, dx$ este divergentă. \\
+
+\subsubsection{Criteriul de comparație cu limite}
+Fie $f, g \in \mathcal{R}_{loc}([a,b))$ astfel încât $f(x), g(x) \geq 0$, $\forall \, x \in [a,b)$ și
+$\exists \, \displaystyle\lim_{\substack{x \rightarrow b \\ x < b}} \displaystyle\frac{f(x)}{g(x)} = l \in [0, +\infty) \cup \{ +\infty \}$.
+\begin{itemize}
+    \item Dacă $l \in (0, +\infty)$, $\displaystyle\int_{a}^{b-0} f(x) \, dx$ și $\displaystyle\int_{a}^{b-0} g(x) \, dx$ au aceiași natură.
+    \item Dacă $l = 0$ și $\displaystyle\int_{a}^{b-0} g(x) \, dx$ este convergentă, atunci $\displaystyle\int_{a}^{b-0} f(x) \, dx$ este convergentă.
+    \item Dacă $l = +\infty$ și $\displaystyle\int_{a}^{b-0} g(x) \, dx$ este divergentă, atunci $\displaystyle\int_{a}^{b-0} f(x) \, dx$ este divergentă.
+\end{itemize}
+
+\subsubsection{Formula Leibniz-Newton pentru integralele improprii}
+Fie $f \in \mathcal{R}_{loc}([a,b)) f$ admite primitive pe $[a, b)$ și $\exists \, \displaystyle\lim_{\substack{x \rightarrow b \\ x < b}} F(x) \in \mathbb{R}$,
+unde $F:[a,b) \rightarrow \mathbb{R}$ este primitivă a lui $f$. Următoarele afirmații sunt echivalente:
+\begin{enumerate}[label=\emph{\alph*})]
+    \item $\displaystyle\int_{a}^{b-0} f(x) \, dx$ este convergentă.
+    \item $\displaystyle\lim_{\substack{x \rightarrow b \\ x < b}} F(x) \in \mathbb{R}$.
+\end{enumerate}
+În plus, $\displaystyle\int_{a}^{b-0} f(x) \, dx = \Bigl. F(x) \Bigr|_{a}^{b-0} = \displaystyle\lim_{\substack{x \rightarrow b \\ x < b}} (F(x) - F(a))$.
+
+\subsubsection{Formula de integrare prin părți a integralelor improprii}
+Fie $f, g:[a,b) \rightarrow \mathbb{R}$ două funcții derivabile pe $[a,b)$ astfel încât
+$f', g' \in \mathcal{R}_{loc}([a,b))$ și $\exists \, \displaystyle\lim_{\substack{x \rightarrow b \\ x < b}} f(x) \, g(x) \in \mathbb{R}$.
+Următoarele afirmații sunt echivalente:
+
+\begin{enumerate}[label=\emph{\alph*})]
+    \item $\displaystyle\int_{a}^{b-0} f(x) \, g'(x) \, dx$ este convergentă.
+    \item $\displaystyle\int_{a}^{b-0} f'(x) \, g(x) \, dx$ este convergentă.
+\end{enumerate}
+$\displaystyle\int_{a}^{b-0} f(x) \, g'(x) \, dx = \Bigl. f(x) \, g(x) \Bigr|_{a}^{b-0} - \displaystyle\int_{a}^{b-0} f'(x) \, g(x) \, dx$, \\
+unde $\Bigl. f(x) \, g(x) \Bigr|_{a}^{b-0} = \displaystyle\lim_{\substack{x \rightarrow b \\ x < b}} f(x) \, g(x) - f(a) \, g(a)$.
+
+\subsubsection{Formula de schimbare de variabilă pentru integralele improprii}
+Fie $f \in \mathcal{R}_{loc}([a,b))$ și $\varphi:[c,d) \rightarrow [a,b)$ astfel încât
+\begin{itemize}
+    \item $\varphi$ este derivabilă cu derivata funcției continuă;
+    \item $\varphi$ este bijectivă;
+    \item $\varphi(c) = a, \displaystyle\lim_{\substack{y \rightarrow d \\ y < d}} \varphi(y) = b$.
+\end{itemize}
+Următoarele afirmații sunt echivalente:
+\begin{enumerate}[label=\emph{\alph*})]
+    \item $\displaystyle\int_{a}^{b-0} f(x) \, dx$ este convergentă;
+    \item $\displaystyle\int_{c}^{d-0} f( \varphi(y) ) \varphi'(y) \, dy$ este convergentă.
+\end{enumerate}
+În plus, $\displaystyle\int_{a}^{b-0} f(x) \, dx = \displaystyle\int_{c}^{d-0} f( \varphi(y) ) \varphi'(y) \, dy$.
+
+\subsubsection{Criteriile Abel-Dirichlet pentru integralele improprii}
+Fie $f, g \in \mathcal{R}_{loc}([a,b))$ astfel încât $f$ este funcție descrescătoare pe $[a,b)$ și
+$\exists \, \displaystyle\lim_{\substack{x \rightarrow b \\ x < b}} f(x) = l \in \mathbb{R} \cup \{ -\infty \}$.
+\begin{enumerate}[label=\emph{\alph*})]
+    \item Dacă $l \in \mathbb{R}$ și $\displaystyle\int_{a}^{b-0} g(x) \, dx$ este convergentă atunci $\displaystyle\int_{a}^{b-0} f(x) \, g(x) \, dx$ este convergentă;
+    \item Dacă $l = 0$ și $\exists \, M>0$ astfel încât $\left| \displaystyle\int_{a}^{b-0} g(x) \, dx \right| \leq M$, $\forall c \in [a,b)$, 
+        atunci $\displaystyle\int_{a}^{b-0} f(x) \, g(x) \, dx$ este convergentă.
+\end{enumerate}
+
+\paragraph{Teorema 1.}
+Fie $f:[a, +\infty) \rightarrow \mathbb{R}$ o funcție descrescătoare și pozitivă pe $[a, +\infty)$.
+Următoarele afirmații sunt echivalente:
+\begin{enumerate}[label=\emph{\alph*})]
+    \item $\displaystyle\int_{a}^{+\infty} f(x) \, dx$ este convergentă;
+    \item $\displaystyle\sum_{n \geq [a]} f(n)$ este convergentă.
+\end{enumerate}

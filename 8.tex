@@ -1,0 +1,119 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+%                      %
+%       CURSUL 8       %
+%                      %
+%%%%%%%%%%%%%%%%%%%%%%%%
+\part{}
+
+\section{Derivate parțiale. Legătura cu diferențiabilitatea}
+$f:D=\mathring{D} \subseteq \mathbb{R}^{k} \rightarrow \mathbb{R}^{p}$, $k, p \in \mathbb{N}^{*}$ \\[7pt]
+$f(x_{1}, x_{2}, \mathellipsis, x_{k}) = (f_{1}(x_{1}, \mathellipsis, x_{k}), f_{2}(x_{1}, \mathellipsis, x_{k}), \mathellipsis, f_{p}(x_{1}, \mathellipsis, x_{k}))$. \\
+$f_{1}, f_{2}, \mathellipsis, f_{p}:D \rightarrow \mathbb{R}$, $f \, ^{\ushortdw{not}} \, (f_{1}, f_{2}, \mathellipsis, f_{p})$. \\[7pt]
+$\mathbb{R}^{k}$ este spațiu vectorial real, $dim_{\mathbb{R}} \mathbb{R}^{k} = k$. \\[7pt]
+$B = \{e_{1}, e_{2}, \mathellipsis, e_{k} \}$ - baza canonică în $\mathbb{R}^{k}$, \\
+$e_{1} = (1, 0, \mathellipsis, 0)$ \\
+$e_{2} = (0, 1, \mathellipsis, 0)$ \\
+$\ldots$ \\
+$e_{k} = (0, 0, \mathellipsis, 1)$
+
+\paragraph{Definiția 1.}
+Spunem că $f$ admite derivată parțială în raport cu variabila $x_{i}$, $1 \leq i \leq k$ în punctul $x_{0} \in D$ dacă
+$\exists \, \displaystyle\lim_{t \rightarrow 0} \displaystyle\frac{1}{t} (f(x_{0} + te_{i}) - f(x_{0})) \in \mathbb{R}^{p}$.
+
+\paragraph{NOTAȚIE}
+$\displaystyle\lim_{t \rightarrow 0} \displaystyle\frac{1}{t} (f(x_{0} + te_{i}) - f(x_{0})) \, ^{\ushortdw{not}} \,
+\displaystyle\frac{\partial f}{\partial x_{i}}(x_{0})$ - derivata parțială a funcției $f$ în raport cu variabila $x_{i}$ în
+punctul $x_{0}$.
+
+\paragraph{Observație}
+$x_{0} = (a_{1}, a_{2}, \mathellipsis, a_{k})$ \\
+$x_{0} + te_{i} = (a_{1}, a_{2}, \mathellipsis, a_{i-1}, a_{i}+t, a_{i+1}, \mathellipsis, a_{k})$ \\[8pt]
+$\displaystyle\frac{\partial f}{\partial x_{i}}(x_{0}) = 
+\displaystyle\lim_{t \rightarrow 0} \displaystyle\frac{1}{t}(f(a_{1}, \mathellipsis, a_{i-1}, a_{i}+t, a_{i+1}, \mathellipsis, a_{k}) -
+f(a_{1}, a_{2}, \mathellipsis, a_{k})) \in \mathbb{R}^{p}$.
+
+\paragraph{Teorema 1.}
+Fie $f:D = \mathring{D} \subseteq \mathbb{R}^{k} \rightarrow \mathbb{R}^{p}$, $f = (f_{1}, \mathellipsis, f_{p})$ și
+$x_{0} \in D$. Următoarele afirmații sunt echivalente:
+\begin{enumerate}[label=\emph{\alph*})]
+    \item $f$ admite derivată parțială în raport cu variabila $x_{i}$ în $x_{0}$;
+    \item $f_{1}, f_{2}, \mathellipsis, f_{p}$ admit derivată parțială în raport cu variabila $x_{i}$ în $x_{0}$.
+\end{enumerate}
+În plus, $\displaystyle\frac{\partial f}{\partial x_{i}}(x_{0}) = 
+\left( \displaystyle\frac{\partial f_{1}}{\partial x_{i}}(x_{0}), \mathellipsis, \displaystyle\frac{\partial f_{p}}{\partial x_{i}}(x_{0}) \right)$.
+
+\paragraph{Exemplu:}
+$f:\mathbb{R}^{2} \rightarrow \mathbb{R}^{2}$, $f(x, y) = (xy, x^{2}+y^{2})$. Studiați dacă $f$ admite derivată parțială în origine $(0,0)$. \\[9pt]
+$f_{1}, f_{2}: \mathbb{R}^{2} \rightarrow \mathbb{R}$, $f_{1}(x,y) = xy$, $f_{2}(x, y) = x^{2} + y^{2}$. \\[9pt]
+$\displaystyle\lim_{t \rightarrow 0} \displaystyle\frac{f_{1}((0,0) + t(1,0)) - f_{1}(0,0)}{t} =
+\displaystyle\lim_{t \rightarrow 0} \displaystyle\frac{f_{1}(t,0) - f_{1}(0,0)}{t} = 
+\displaystyle\lim_{t \rightarrow 0} \displaystyle\frac{t \cdot 0 - 0 \cdot 0}{t} = 0 \in \mathbb{R}
+\Rightarrow \exists \, \displaystyle\frac{\partial f_{1}}{\partial x}(0,0) = 0$. \\[7pt]
+$\displaystyle\lim_{t \rightarrow 0} \displaystyle\frac{f_{2}((0,0) + t(1,0)) - f_{2}(0,0)}{t} =
+\displaystyle\lim_{t \rightarrow 0} \displaystyle\frac{f_{2}(t,0) - f_{2}(0,0)}{t} = 
+\displaystyle\lim_{t \rightarrow 0} \displaystyle\frac{t^{2} + 0^{2} - 0}{t} = 0 \in \mathbb{R}
+\Rightarrow \exists \, \displaystyle\frac{\partial f_{2}}{\partial x}(0,0) = \quad =0 \Rightarrow$
+Conform teoremei 1 $\Rightarrow \exists \, \displaystyle\frac{\partial f}{\partial x}(0,0) = 0$ \\[14pt]
+$\displaystyle\lim_{t \rightarrow 0} \displaystyle\frac{f_{1}((0,0) + t(0,1)) - f_{1}(0,0)}{t} =
+\displaystyle\lim_{t \rightarrow 0} \displaystyle\frac{f_{1}((0,t)) - f_{1}(0,0)}{t} =
+\displaystyle\lim_{t \rightarrow 0} \displaystyle\frac{0 - 0}{t} = 0
+\Rightarrow \exists \, \displaystyle\frac{\partial f_{1}}{\partial y}(0,0) = 0$ \\[7pt]
+$\displaystyle\lim_{t \rightarrow 0} \displaystyle\frac{f_{2}((0,0) + t(0,1)) - f_{2}(0,0)}{t} =
+\displaystyle\lim_{t \rightarrow 0} \displaystyle\frac{f_{2}(0,t) - f_{2}(0,0)}{t} = 
+\displaystyle\lim_{t \rightarrow 0} \displaystyle\frac{t^{2} - 0}{t} = 0 \in \mathbb{R}
+\Rightarrow \exists \, \displaystyle\frac{\partial f_{2}}{\partial y}(0,0) = 0 \Rightarrow$
+Conform teoremei 1 $\Rightarrow \exists \, \displaystyle\frac{\partial f}{\partial y}(0,0) = 0$.
+
+
+\paragraph{Teorema 2.}
+Dacă $f:D=\mathring{D} \subseteq \mathbb{R}^{k} \rightarrow \mathbb{R}^{p}$ este diferențiabilă în $x_{0} \in D$,
+atunci $f$ admite toate derivatele parțiale în $x_{0}$ și avem următoarele formule:
+\begin{enumerate}[label=\emph{\alph*})]
+    \item $\displaystyle\frac{\partial f}{\partial x_{i}}(x_{0}) = df_{x_{0}}(e_{i})$, $\forall \, 1 \leq i \leq k$
+    \item $df_{x_{0}}: \mathbb{R}^{k} \rightarrow \mathbb{R}^{p}$ \\
+        $df_{x_{0}}(x_{1}, x_{2}, \mathellipsis, x_{k}) = x_{1} \displaystyle\frac{\partial f}{\partial x_{1}}(x_{0}) +
+        x_{2} \displaystyle\frac{\partial f}{\partial x_{2}}(x_{0}) + \mathellipsis + x_{k} \displaystyle\frac{\partial f}{\partial x_{k}}(x_{0})$, 
+        $\forall \, (x_{1}, \mathellipsis, x_{k}) \in \mathbb{R}^{k}$
+\end{enumerate}
+
+\paragraph{Corolar.}
+Dacă $f$ nu admite cel puțin o dervată parțială în $x_{0}$, atunci $f$ nu este diferențiabilă în $x_{0}$.
+
+\paragraph{Teorema 3.}
+Fie $f:D = \mathring{D} \subseteq \mathbb{R}^{k} \rightarrow \mathbb{R}^{p}$, $x_{0} \in D$ și $V \in \mathcal{V}(x_{0}) \subseteq D$
+astfel încât $f$ admite toate derivatele parțiale pe $V$ și acestea sunt continue în $x_{0}$. Atunci $f$ este diferențiabilă în $x_{0}$.
+
+\paragraph{Cazuri particulare}
+\begin{enumerate}[label=\emph{\arabic*})]
+    \item $f:D = \mathring{D} \subseteq \mathbb{R} \rightarrow \mathbb{R}^{p}(k=1)$ \\
+        $f(x) = (f_{1}(x), f_{2}(x), \mathellipsis, f_{p}(x))$, $f_{1}, f_{2}, \mathellipsis, f_{p}:D \subseteq \mathbb{R} \rightarrow \mathbb{R}$
+        \begin{itemize}
+            \item $f$ este diferențiabilă în $x_{0} \in D \Leftrightarrow f_{1}, f_{2}, \mathellipsis, f_{p}$ sunt derivabile în $x_{0}$.
+            \item $df_{x_{0}}:\mathbb{R} \rightarrow \mathbb{R}^{p}$, $df_{x_{0}}(x) = x \cdot (f_{1}'(x_{0}), f_{2}'(x_{0}), \mathellipsis, f_{p}'(x_{0}))$, $\forall \, x \in \mathbb{R}$.
+        \end{itemize}
+    \item $f:D = \mathring{D} \subseteq \mathbb{R}^{k} \rightarrow \mathbb{R}$, $(p = 1)$, $k \geq 2$, $f(x_{1}, x_{2}, \mathellipsis, x_{k}) \in \mathbb{R}$, 
+        $df_{x_{0}}: \mathbb{R}^{k} \rightarrow \mathbb{R}$ \\
+        $df_{x_{0}}(x_{1}, \mathellipsis, x_{k}) = x_{1} \displaystyle\frac{\partial f}{\partial x_{1}}(x_{0}) +
+        x_{2} \displaystyle\frac{\partial f}{\partial x_{2}}(x_{0}) + \mathellipsis + x_{k} \displaystyle\frac{\partial f}{\partial x_{k}}(x_{0})$.
+    \item $f:D = \mathring{D} \subseteq \mathbb{R}^{k} \rightarrow \mathbb{R}^{p}$, $k, p \geq 2$ \\
+        $f(x_{1}, \mathellipsis, x_{k}) = (f_{1}(x_{1}, \mathellipsis, x_{k}), \mathellipsis, f_{p}(x_{1}, \mathellipsis, x_{k}))$ \\
+        $f_{1}, f_{2}, \mathellipsis, f_{p}:D \subseteq \mathbb{R}^{k} \rightarrow \mathbb{R}$, $df_{x_{0}}: \mathbb{R}^{k} \rightarrow \mathbb{R}^{p}$ \\
+        $df_{x_{0}}(x_{1}, \mathellipsis, x_{k}) = x_{1} \displaystyle\frac{\partial f}{\partial x_{1}}(x_{0}) + \mathellipsis + x_{k}\displaystyle\frac{\partial f}{\partial x_{k}}(x_{0}) = 
+        \left[ A \cdot \left(
+            \begin{array}{c}
+            x_{1} \\
+            x_{2} \\
+            \vdots \\
+            x_{k}
+            \end{array}
+        \right) \right]^{t}$, \\[15pt]
+        unde $A \in \mathcal{M}_{p,k}(\mathbb{R})$, $A = 
+        \left(
+         \begin{array}{cccc}
+          \displaystyle\frac{\partial f_{1}}{\partial x_{1}(x_{0})} & \displaystyle\frac{\partial f_{1}}{\partial x_{1}(x_{0})} & \ldots & \displaystyle\frac{\partial f_{1}}{\partial x_{1}(x_{0})} \\[15pt]
+          \displaystyle\frac{\partial f_{1}}{\partial x_{1}(x_{0})} & \displaystyle\frac{\partial f_{1}}{\partial x_{1}(x_{0})} & \ldots & \displaystyle\frac{\partial f_{1}}{\partial x_{1}(x_{0})} \\[15pt]
+          \vdots & \vdots & \vdots & \vdots \\[15pt]
+          \displaystyle\frac{\partial f_{1}}{\partial x_{1}(x_{0})} & \displaystyle\frac{\partial f_{1}}{\partial x_{1}(x_{0})} & \ldots & \displaystyle\frac{\partial f_{1}}{\partial x_{1}(x_{0})} \\[15pt]
+         \end{array}
+        \right)$
+\end{enumerate}

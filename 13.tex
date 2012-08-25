@@ -1,0 +1,117 @@
+%%%%%%%%%%%%%%%%%%%%%%%%
+%                      %
+%       CURSUL 13      %
+%                      %
+%%%%%%%%%%%%%%%%%%%%%%%%
+\part{}
+\paragraph{Propoziția 1.}
+Fie $f \in \mathcal{R}([a,b])$ și considerăm funcțiile $F,G:[a,b] \rightarrow \mathbb{R}$ definite prin
+$F(x) = \displaystyle\int_{a}^{x} f(t) \, dt, G(x) = \displaystyle\int_{x}^{b}f(t) \, dt$. Atunci $F,G$
+sunt funcții continue pe $[a,b]$. \\[5pt]
+Dacă $f$ este continuă în $x_{0} \in [a,b]$, $F, G$ sunt derivabile în $x_{0}$ și $F'(x_{0}) = f(x_{0}), G'(x_{0})=-f(x_{0})$. \\[5pt]
+Dacă $f$ este continuă pe $[a,b]$, $F, G$ sunt derivabile pe $[a,b]$ și $F'(x)=f(x)$, $G'(x) = -f(x)$, $\forall x \in [a,b]$.
+
+\paragraph{Corolar}
+Orice funcție continuă $f:\underset{\text{interval}}{I} \subseteq \mathbb{R} \rightarrow \mathbb{R}$ admite primitive.
+
+\paragraph{Construcția unei primitive:}
+$a \in I$ se fixează. $F:I \rightarrow \mathbb{R}$, $F(x)=\displaystyle\int_{a}^{b} f(t) \, dt$.
+
+\paragraph{Propoziția 2.}
+Fie $f:\underset{\text{interval}}{I} \subseteq \mathbb{R} \rightarrow \mathbb{R}$ o funcție continuă și $g,h:J \subseteq \mathbb{R} \rightarrow I \subseteq \mathbb{R}$
+două funcții derivabile pe $J$. Atunci funcția $F:J \rightarrow \mathbb{R}$, $F(x) = \displaystyle\int_{g(x)}^{f(x)} f(t) \, dt$ este derivabilă pe $J$
+și \\ $F'(x) = f(h(x) \cdot h'(x)) - f(g(x) \cdot g'(x))$, $\forall x \in J$.
+
+\subsubsection{Formula Leibniz-Newton}
+Fie $f \in \mathcal{R}([a,b])$ astfel încât $f$ admite primitive. Atunci $\displaystyle\int_{a}^{b} f(x) \, dx = \Bigl.F(x) \Bigr|_{a}^{b} =
+F(b) - F(a)$, unde $F$ este o primitivă a lui $f$.
+
+\subsubsection{Formula de integrare prin părți}
+Fie $f, g:[a,b] \rightarrow \mathbb{R}$ două funcții derivabile pe $[a,b]$ astfel încât $f', g' \in \mathcal{R}([a,b])$.
+Atunci \\ $\displaystyle\int_{a}^{b} f(x)g'(x) \, dx = \Bigl.f(x)g(x) \Bigr|_{a}^{b} - \displaystyle\int_{a}^{b} f'(x)g(x) \, dx$.
+
+\subsubsection{Schimbarea de variabilă pentru integralele definite}
+Fie $f \in \mathcal{R}([a,b])$ și $f:[\alpha, \beta] \rightarrow [a,b]$ o funcție bijectivă cu $\varphi(\alpha) = a$,
+$\varphi(\beta) = b$, derivabilă cu $\varphi'$ funcție continuă. Atunci $(f \circ \varphi) \cdot \varphi' \in \mathcal{R}([a,b])$
+și $\displaystyle\int_{\alpha}^{\beta} f(\varphi(x)) \cdot \varphi'(t) \, dt = \displaystyle\int_{a = \varphi(\alpha)}^{b = \varphi(\beta)} f(x) \, dx$.
+
+\paragraph{Teorema 1.}
+Fie $f, g \in \mathcal{R}([a,b])$.
+\begin{enumerate}[label=\emph{\alph*})]
+    \item Dacă $f(x) \geq 0$, $\forall x \in [a,b]$, atunci $\displaystyle\int_{a}^{b} f(x) \, dx \geq 0$.
+    \item Dacă $f(x) \geq g(x)$, $\forall x \in [a,b]$, atunci $\displaystyle\int_{a}^{b} f(x) \, dx \geq \displaystyle\int_{a}^{b} g(x) \, dx$.
+    \item Are loc inegalitatea $m(b-a) \leq \displaystyle\int_{a}^{b} f(x) \, dx \leq M(b-a)$, unde $m = \displaystyle\inf_{t \in [a,b]}f(t)$, $M = \displaystyle\sup_{t \in [a,b]}f(t)$.
+    \item Fie $f:[a,b] \rightarrow \mathbb{R}$ o funcție continuă astfel încât $f(x) \geq 0$, $\forall x \in [a,b]$ și $\displaystyle\int_{a}^{b} f(x) \, dx=0$.
+        Atunci $f(x) = 0$, $\forall x \in [a,b]$.
+    \item Fie $f:[a,b] \rightarrow \mathbb{R}$ o funcție continuă astfel încât $f(x) \geq 0$, $\forall x \in [a,b]$ și $\exists \, x_{0} \in [a,b]$
+        astfel încât $f(x_{0}) > 0$. Atunci $\displaystyle\int_{a}^{b} f(x) \, dx \geq 0$.
+\end{enumerate}
+
+\subsubsection{Prima teoremă de medie pentru integralele definite}
+Fie $f, g \in \mathcal{R}([a,b])$ astfel încât $f$ are proprietatea lui Darboux pe $[a,b]$ și $g \geq 0$. Atunci $\exists \, c \in (a, b)$
+astfel încât $\displaystyle\int_{a}^{b} f(x) g(x) \, dx = f(c) \cdot \displaystyle\int_{a}^{b} g(x) \, dx$.
+
+\paragraph{Corolar}
+Dacă $f:[a,b] \rightarrow \mathbb{R}$ este funcție continuă, $\exists \, c \in (a,b)$ astfel încât \\
+$\displaystyle\int_{a}^{b} f(x) \, dx = f(c) \cdot \displaystyle\int_{a}^{b} 1 \, dx = f(c) \, (b-a)$.
+
+\subsubsection{A doua teoremă de medie pentru integralele definite}
+Fie $f, g \in \mathcal{R}([a,b])$ astfel încât $g$ este funcție monotonă. Atunci $\exists \, c \in [a,b]$
+astfel încât \\ $\displaystyle\int_{a}^{b} f(x) \, g(x) \, dx = g(a) \cdot \displaystyle\int_{a}^{c} f(x) \, dx + 
+g(b) \cdot \displaystyle\int_{c}^{b} f(x) \, dx$.
+
+\paragraph{Corolar}
+Fie $f:[a,b] \rightarrow \mathbb{R}$ o funcție continuă și $g:[a.b] \rightarrow \mathbb{R}_{+}$.
+\begin{enumerate}[label=\emph{\alph*})]
+    \item Dacă $g$ este crescătoare, $\exists \, c \in [a,b]$ astfel încât $\displaystyle\int_{a}^{b} f(x) \, g(x) \, dx =
+        g(b) \cdot \displaystyle\int_{b}^{c} f(x) \, dx$.
+    \item Dacă $g$ este descrescătoare, $\exists \, c \in [a,b]$ astfel încât $\displaystyle\int_{a}^{b} f(x) \, g(x) \, dx =
+        g(a) \cdot \displaystyle\int_{a}^{c} f(x) \, dx$.
+\end{enumerate}
+
+\subsection{Integrala improprie}
+$f: I \rightarrow \mathbb{R}$ \\
+$I = [a,b) \vee (a, b] \vee (a, b) \vee (-\infty, a] \vee (-\infty, a) \vee (a, +\infty) \vee [a, +\infty) \vee \mathbb{R}$ ($\vee$ = sau).
+
+\paragraph{Definiția 1.}
+Funcția $f: I \rightarrow \mathbb{R}$ se numește local integrabilă pe $I$ dacă $\forall \, \alpha < \beta \in I$, $\bigl. f \bigr|_{[\alpha, \beta]} \in \mathcal{R}([\alpha, \beta]$. 
+
+\paragraph{NOTAȚIE}
+$\mathcal{R}_{loc}(I)$ $^{\ushortdw{def}}$ $\{ f: I \rightarrow \mathbb{R}$ $|$ $f$ este local integrabilă pe $I \}$. \\[10pt]
+Exemple de funcții local integrabile:
+\begin{enumerate}[label=\emph{\arabic*})]
+    \item Orice funcție monotonă $f: I \rightarrow \mathbb{R}$ este local integrabilă pe $I$.
+    \item Orice funcție continuă $f: I \rightarrow \mathbb{R}$ este local integrabilă pe $I$.
+\end{enumerate}
+\rule{450pt}{1pt}\\[5pt]
+$f:[a,b) \rightarrow \mathbb{R}$, $\displaystyle\int_{a}^{b-0} f(x) \, dx$.
+
+\paragraph{Definiția 2.}
+Fie $f \in \mathcal{R}_{loc}([a,b])$. Integrala improprie $\displaystyle\int_{a}^{b-0} f(x) \, dx$ se numește convergentă dacă
+$\exists \, \displaystyle\lim_{\substack{x \rightarrow b \\ x < b}} \displaystyle\int_{a}^{x} f(t) \, dt \in \mathbb{R}$. \\[8pt]
+$f:(a, b) \rightarrow \mathbb{R}$,
+$\exists \, \displaystyle\lim_{\substack{x \rightarrow a \\ x > a \\ y \rightarrow b \\ y < b}} \displaystyle\int_{x}^{y} f(t) \, dt \in \mathbb{R}$. \\[8pt]
+$f:[a, +\infty) \rightarrow \mathbb{R}$,
+$\exists \, \displaystyle\lim_{x \rightarrow \infty} \displaystyle\int_{a}^{x} f(t) \, dt \in \mathbb{R}$. \\[8pt]
+Integrala improprie $\displaystyle\int_{a}^{b-0}f(x) \, dx$ se numește divergentă dacă nu este convergentă. \\
+Integrala improprie $\displaystyle\int_{a}^{b-0}f(x) \, dx$ se numește absolut convergentă dacă integrala $\displaystyle\int_{a}^{b-0} \left| f(x) \right| \, dx$ este convergentă. \\
+
+\subsubsection{Criteriul lui Cauchy pentru integralele improprii}
+Fie $f \in \mathcal{R}_{loc}([a,b])$.
+\begin{enumerate}[label=\emph{\alph*})]
+    \item $\displaystyle\int_{a}^{b-0} f(x) \, dx$ este convergentă $\Leftrightarrow \forall \, \varepsilon > 0, \exists \, t_{\varepsilon} \in [a,b)$ astfel încât
+        $\left| \displaystyle\int_{x}^{y} f(t) \, dt \right| < \varepsilon$, $\forall t_{\varepsilon} < x < y < b$.
+    \item $\displaystyle\int_{a}^{b-0} f(x) \, dx$ este absolut convergentă $\Leftrightarrow \forall \, \varepsilon > 0, \exists \, t_{\varepsilon} \in [a,b)$ astfel încât
+        $\displaystyle\int_{x}^{y} \left| f(t) \right| \, dt < \varepsilon$, $\forall t_{\varepsilon} < x < y < b$.
+\end{enumerate}
+
+\paragraph{Teorema 1.}
+Dacă $\displaystyle\int_{a}^{b-0} f(x) \, dx$ este absolut convergentă atunci este convergentă. \\
+Dacă $\displaystyle\int_{a}^{b-0} f(x) \, dx$ este absolut convergentă $\underset{\text{Cauchy (b)}}{\xLongrightarrow{\text{Criteriul lui}}}$
+$\forall \, \varepsilon > 0$, $\exists \, t_{\varepsilon} \in [a, b)$ astfel încât $\displaystyle\int_{x}^{y} \left| f(t) \right| dt < \varepsilon$,
+$\forall \, t_{\varepsilon} < x < y < b$ \ding{172}. \\[6pt]
+Știm că $\left| \displaystyle\int_{x}^{y} f(t) \, dt \right| \leq \int_{x}^{y} \left| f(t) \right| dt$, $\forall x < y$ \ding{173}. \\[5pt]
+Din \ding{172} și \ding{173} $\Rightarrow \left| \displaystyle\int_{x}^{y} f(t) \, dt \right| < \varepsilon$, $\forall \, t_{\varepsilon} < x < y < b$
+$\underset{\text{Cauchy (b)}}{\xLongrightarrow{\text{Criteriul lui}}} \displaystyle\int_{a}^{b-0} f(x) \, dx$ este convergentă. \\[8pt]
+Reciproca teoremei este falsă.
+
